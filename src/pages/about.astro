@@ -1,16 +1,10 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import { Image } from 'astro:assets';
 import { SITE } from 'astrowind:config';
 
-/**
- * PHOTOS: To add real founder photos, place images in:
- *   src/assets/images/team/sathyanand.jpg
- *   src/assets/images/team/gautham.jpg
- * Then uncomment the imports below and replace the initials avatars with <img> tags.
- *
- * import sathyanandPhoto from '~/assets/images/team/sathyanand.jpg';
- * import gauthamPhoto from '~/assets/images/team/gautham.jpg';
- */
+import sathyanandPhoto from '~/assets/images/team/Sathya Profile Photo.jpg';
+import gauthamPhoto from '~/assets/images/team/Gautham Profile Photo.jpg';
 
 const metadata = {
   title: 'About Us',
@@ -36,7 +30,8 @@ const aboutSchema = {
 const founders = [
   {
     name: 'Sathyanand S',
-    initials: 'SS',
+    photo: sathyanandPhoto,
+    photoAlt: 'Sathyanand S, Co-Founder of SellOnTube',
     role: 'Co-Founder, SellOnTube',
     bio: 'Sathyanand brings deep expertise in content strategy and B2B growth. He helps founders turn YouTube into a systematic customer acquisition channel — not a content treadmill.',
     linkedin: 'https://www.linkedin.com/in/sathyanands/',
@@ -45,7 +40,8 @@ const founders = [
   },
   {
     name: 'Gautham',
-    initials: 'G',
+    photo: gauthamPhoto,
+    photoAlt: 'Gautham, Co-Founder of SellOnTube',
     role: 'Co-Founder, SellOnTube',
     bio: 'Gautham focuses on the intersection of search intent, YouTube SEO, and business outcomes. He leads the diagnostic process that determines whether YouTube can genuinely pay for itself for each client.',
     linkedin: 'https://www.linkedin.com/in/mindcharting/',
@@ -103,10 +99,13 @@ const founders = [
         {founders.map((founder) => (
           <div class="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col items-center text-center">
 
-            <!-- Avatar (replace this div with an <img> tag once you add photos) -->
-            <div class="w-24 h-24 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center mb-5 flex-shrink-0">
-              <span class="text-2xl font-bold text-emerald-700 dark:text-emerald-300">{founder.initials}</span>
-            </div>
+            <Image
+              src={founder.photo}
+              alt={founder.photoAlt}
+              width={96}
+              height={96}
+              class="w-24 h-24 rounded-full object-cover object-top mb-5 flex-shrink-0"
+            />
 
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{founder.name}</h3>
             <p class="text-sm text-emerald-600 dark:text-emerald-400 mt-1 mb-4">{founder.role}</p>
