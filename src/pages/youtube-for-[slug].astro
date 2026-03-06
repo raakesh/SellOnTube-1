@@ -43,7 +43,7 @@ const breadcrumbSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": niche.faqs.map((faq) => ({
+  "mainEntity": [...niche.faqs, ...niche.industryFaqs].map((faq) => ({
     "@type": "Question",
     "name": faq.question,
     "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
@@ -417,6 +417,54 @@ const serviceSchema = {
       </div>
     </section>
 
+    <!-- High-Intent YouTube Topics -->
+    <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+        High-Intent YouTube Topics for {niche.name}
+      </h2>
+      <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+        These are the types of YouTube searches {niche.shortName} buyers make when they are actively evaluating solutions. Ranking for these topics puts your business in front of prospects at the moment they are closest to a decision.
+      </p>
+      <ul class="space-y-2">
+        {niche.topicExamples.map((topic) => (
+          <li class="flex items-center gap-3 bg-slate-50 dark:bg-slate-800 rounded-lg px-4 py-3">
+            <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <span class="text-sm text-gray-800 dark:text-slate-200">{topic}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Tool Integration -->
+    <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+        Evaluate Your YouTube Topics Before You Record
+      </h2>
+      <p class="text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-4">
+        Most businesses produce YouTube videos without validating the topic first. They pick something that feels relevant, record it, and wait. When nothing happens, they conclude YouTube doesn't work for their industry.
+      </p>
+      <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+        The problem is rarely the video. It's the topic. A video targeting a search with no buyer demand, or one that's already dominated by established channels, will not surface in front of the prospects you're trying to reach.
+      </p>
+      <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 p-6">
+        <p class="font-semibold text-gray-900 dark:text-white mb-2">SellOnTube YouTube Topic Evaluator</p>
+        <p class="text-gray-600 dark:text-slate-400 text-sm leading-relaxed mb-5">
+          Enter any topic and get an instant read on its acquisition potential, estimated search demand, and competitive intensity. Free to use. No signup required.
+        </p>
+        <a
+          href="/tools/youtube-topic-evaluator"
+          class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-5 py-2.5 rounded-full hover:bg-primary/90 transition-all text-sm"
+        >
+          Evaluate a topic free
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
     <!-- Is This Right For You -->
     <section class="py-10 border-t border-slate-200 dark:border-slate-700">
       <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
@@ -470,6 +518,67 @@ const serviceSchema = {
             <p class="text-gray-600 dark:text-slate-400 leading-relaxed">{faq.answer}</p>
           </div>
         ))}
+      </div>
+    </section>
+
+    <!-- Common Questions About YouTube for This Industry -->
+    <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
+        Common Questions About YouTube for {niche.name}
+      </h2>
+      <div class="space-y-8">
+        {niche.industryFaqs.map((faq) => (
+          <div class="border-b border-slate-100 dark:border-slate-800 pb-8 last:border-0 last:pb-0">
+            <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-3">{faq.question}</h3>
+            <p class="text-gray-600 dark:text-slate-400 leading-relaxed">{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Common Mistakes -->
+    <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+        Common Mistakes {niche.name} Make When Using YouTube for Acquisition
+      </h2>
+      <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-8">
+        Most {niche.shortName} that try YouTube and see no results aren't failing because YouTube doesn't work for them. They're failing because of avoidable mistakes in how they approach it.
+      </p>
+      <div class="space-y-6">
+        {niche.commonMistakes.map((mistake, index) => (
+          <div class="flex gap-5 items-start">
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mt-0.5">
+              <span class="text-xs font-black text-red-600 dark:text-red-400">{index + 1}</span>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900 dark:text-white mb-2">{mistake.title}</p>
+              <p class="text-gray-600 dark:text-slate-400 leading-relaxed">{mistake.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Internal Linking: Other YouTube Acquisition Strategies -->
+    <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+        YouTube Acquisition Strategies for Other Businesses
+      </h2>
+      <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+        The same bottom-of-funnel YouTube strategy applies across business models. See how it works for other industries.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        {niches
+          .filter((n) => n.slug !== niche.slug)
+          .map((n) => (
+            <a
+              href={`/youtube-for-${n.slug}`}
+              class="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 bg-primary/5 hover:bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 transition-colors"
+            >
+              YouTube for {n.name}
+            </a>
+          ))
+        }
       </div>
     </section>
 
