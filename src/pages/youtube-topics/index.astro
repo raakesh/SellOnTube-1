@@ -1,0 +1,207 @@
+---
+import { topics, industries, topicPublishSchedule } from '~/data/topics';
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const siteUrl = SITE.site || 'https://sellontube.com';
+const calLink = 'https://cal.com/gautham-8bdvdx/30min';
+
+const metadata = {
+  title: 'YouTube Topic Library for B2B Businesses | SellOnTube',
+  description: 'Browse 50 high-intent YouTube topic categories built for B2B customer acquisition. SaaS, agencies, consultants, coaches, and B2B services — find the exact topics that reach buyers in evaluation mode.',
+  canonical: `${siteUrl}/youtube-topics`,
+  robots: { index: true, follow: true },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+    { "@type": "ListItem", "position": 2, "name": "YouTube Topic Library", "item": `${siteUrl}/youtube-topics` }
+  ]
+};
+
+// Apply publish schedule filter (IST, same pattern as pSEO pages)
+const cutoff = import.meta.env.DEV ? new Date('2099-12-31') : new Date();
+cutoff.setHours(23, 59, 59, 999);
+const publishedTopics = topics.filter((t) => {
+  const pubDate = topicPublishSchedule[t.slug] ?? t.publishDate;
+  return new Date(pubDate + 'T00:00:00+05:30') <= cutoff;
+});
+
+// Group published topics by industry for rendering
+const topicsByIndustry = industries.map((industry) => ({
+  ...industry,
+  topics: publishedTopics.filter((t) => t.industry === industry.id),
+})).filter((industry) => industry.topics.length > 0);
+---
+
+<Layout metadata={metadata}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Hero -->
+  <div class="bg-slate-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-16 text-center">
+      <div class="flex items-center justify-center gap-2 mb-6">
+        <svg class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+        </svg>
+        <span class="text-sm font-semibold uppercase tracking-wider text-slate-400">YouTube Topic Library</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
+        YouTube Topics That Attract Buyers, Not Just Viewers
+      </h1>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        Most YouTube content attracts curiosity. This library is built for acquisition. Every topic category here is designed to reach B2B buyers during active evaluation — the moment they are deciding, not just learning.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <div class="inline-flex items-center gap-2 bg-slate-800 rounded-full px-4 py-2">
+          <span class="w-2 h-2 rounded-full bg-green-400"></span>
+          <span class="text-sm text-slate-300">{publishedTopics.length} topic categories</span>
+        </div>
+        <div class="inline-flex items-center gap-2 bg-slate-800 rounded-full px-4 py-2">
+          <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+          <span class="text-sm text-slate-300">{industries.length} business types</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Intent explanation strip -->
+  <div class="bg-slate-800 border-b border-slate-700">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+      <div class="grid sm:grid-cols-3 gap-6 text-center">
+        <div>
+          <p class="text-white font-semibold mb-1">Why topic selection matters</p>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            A video about a problem is entertainment. A video about a buying decision is acquisition. The topic determines which one you produce.
+          </p>
+        </div>
+        <div>
+          <p class="text-white font-semibold mb-1">What buyer-intent topics look like</p>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Comparisons, pricing breakdowns, migration guides, ROI analysis, and hiring guides. Searches made by people who are close to a decision.
+          </p>
+        </div>
+        <div>
+          <p class="text-white font-semibold mb-1">How to use this library</p>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Find your business type, browse the topic categories, and evaluate individual topics against your audience using the free Topic Evaluator.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Topic Evaluator CTA (inline, before the grid) -->
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-12 pb-6">
+    <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+      <div class="flex-1">
+        <p class="font-semibold text-gray-900 dark:text-white mb-1">Not sure which topics fit your audience?</p>
+        <p class="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">
+          Paste any topic into the YouTube Topic Evaluator and get an instant buyer-intent score, estimated search demand, and 3–5 higher-converting alternatives.
+        </p>
+      </div>
+      <a
+        href="/tools/youtube-topic-evaluator"
+        class="flex-shrink-0 inline-flex items-center gap-2 bg-primary text-white font-semibold px-5 py-2.5 rounded-full hover:bg-primary/90 transition-all text-sm whitespace-nowrap"
+      >
+        Evaluate a topic free
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Industry sections -->
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 pb-16 space-y-16">
+    {topicsByIndustry.map((industry) => (
+      <section>
+        <!-- Industry header -->
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-primary mb-1">Business type</p>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">{industry.label}</h2>
+            <p class="text-gray-500 dark:text-slate-400 text-sm mt-1 max-w-xl">{industry.description}</p>
+          </div>
+          <a
+            href={`/youtube-for-${industry.hubSlug}`}
+            class="flex-shrink-0 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+          >
+            Full {industry.label} guide
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Topic cards grid -->
+        <div class="grid sm:grid-cols-2 gap-3">
+          {industry.topics.map((topic) => (
+            <a
+              href={`/youtube-topics/${topic.slug}`}
+              class="group block bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-primary hover:shadow-md transition-all duration-200"
+            >
+              <p class="text-xs font-semibold uppercase tracking-wider text-primary mb-2">{industry.label}</p>
+              <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors leading-snug">
+                {topic.title}
+              </h3>
+              <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed line-clamp-2 mb-3">
+                {topic.metaDescription}
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-slate-400 dark:text-slate-500">
+                  {topic.exampleVideoTitles.length} video examples
+                </span>
+                <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary">
+                  View topics
+                  <svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="bg-slate-900">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16 text-center">
+      <p class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Ready to build a YouTube strategy?</p>
+      <h2 class="text-3xl font-bold text-white mb-4">
+        We'll identify the 10 topics most likely to drive customers for your business
+      </h2>
+      <p class="text-slate-400 mb-8 leading-relaxed max-w-xl mx-auto">
+        Book a free 30-minute diagnostic call. We'll look at your acquisition model, your competitive landscape, and tell you exactly which topic categories will move the needle fastest.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={calLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-8 py-3.5 rounded-full hover:bg-primary/90 transition-all"
+        >
+          Book a free diagnostic call
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        <a
+          href="/tools/youtube-topic-evaluator"
+          class="inline-flex items-center gap-2 text-slate-300 hover:text-white font-medium transition-colors text-sm"
+        >
+          Or evaluate a topic first (free)
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</Layout>

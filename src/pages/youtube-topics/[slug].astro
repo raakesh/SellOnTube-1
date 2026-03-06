@@ -1,0 +1,332 @@
+---
+import { topics, getRelatedTopics, topicPublishSchedule } from '~/data/topics';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { SITE } from 'astrowind:config';
+
+export function getStaticPaths() {
+  // Dev: show all pages. Production: apply publish schedule (IST, same as pSEO pages).
+  const cutoff = import.meta.env.DEV ? new Date('2099-12-31') : new Date();
+  cutoff.setHours(23, 59, 59, 999);
+  return topics
+    .filter((topic) => {
+      const pubDate = topicPublishSchedule[topic.slug] ?? topic.publishDate;
+      return new Date(pubDate + 'T00:00:00+05:30') <= cutoff;
+    })
+    .map((topic) => ({
+      params: { slug: topic.slug },
+      props: { topic },
+    }));
+}
+
+const { topic } = Astro.props;
+const siteUrl = SITE.site || 'https://sellontube.com';
+const calLink = 'https://cal.com/gautham-8bdvdx/30min';
+
+const relatedTopics = getRelatedTopics(topic.relatedTopicSlugs);
+
+const metadata = {
+  title: topic.metaTitle,
+  description: topic.metaDescription,
+  canonical: `${siteUrl}/youtube-topics/${topic.slug}`,
+  openGraph: {
+    type: 'article',
+    images: [{ url: '~/assets/images/default.png', width: 1200, height: 628 }],
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+    { "@type": "ListItem", "position": 2, "name": "YouTube Topic Library", "item": `${siteUrl}/youtube-topics` },
+    { "@type": "ListItem", "position": 3, "name": topic.title, "item": `${siteUrl}/youtube-topics/${topic.slug}` },
+  ]
+};
+
+// Industry-specific colour accents for the topic type badge
+const industryColors: Record<string, string> = {
+  saas: 'bg-blue-50 dark:bg-blue-950/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800',
+  agencies: 'bg-violet-50 dark:bg-violet-950/30 text-violet-700 dark:text-violet-300 border-violet-200 dark:border-violet-800',
+  consultants: 'bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800',
+  coaches: 'bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800',
+  'b2b-services': 'bg-rose-50 dark:bg-rose-950/30 text-rose-700 dark:text-rose-300 border-rose-200 dark:border-rose-800',
+};
+const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700';
+---
+
+<Layout metadata={metadata}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <!-- Article Header -->
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 pt-16 pb-10">
+
+    <!-- Breadcrumb -->
+    <div class="flex flex-wrap items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-8">
+      <a href="/" class="hover:text-primary transition-colors">SellOnTube</a>
+      <span>/</span>
+      <a href="/youtube-topics" class="hover:text-primary transition-colors">YouTube Topic Library</a>
+      <span>/</span>
+      <span class="text-gray-700 dark:text-slate-300">{topic.title}</span>
+    </div>
+
+    <!-- Industry badge -->
+    <span class={`inline-flex items-center text-xs font-semibold border rounded-full px-3 py-1 mb-5 ${badgeColor}`}>
+      {topic.industryLabel}
+    </span>
+
+    <!-- H1 -->
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900 dark:text-white mb-4">
+      {topic.heroTitle}
+    </h1>
+
+    <!-- Stat bar -->
+    <div class="flex flex-wrap gap-4 mt-6">
+      <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400">
+        <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.069A1 1 0 0121 8.854v6.292a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/>
+        </svg>
+        {topic.exampleVideoTitles.length} video topic examples
+      </div>
+      <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400">
+        <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+        Buyer-intent focused
+      </div>
+    </div>
+  </div>
+
+  <!-- Article Body -->
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+
+    <!-- Why this topic works -->
+    <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-5">
+        Why This Topic Category Works for {topic.industryLabel} Customer Acquisition
+      </h2>
+      <div class="space-y-4">
+        {topic.intro.split('\n\n').map((para) => (
+          <p class="text-lg text-gray-700 dark:text-slate-300 leading-relaxed">{para}</p>
+        ))}
+      </div>
+    </section>
+
+    <!-- Why it attracts buyers in evaluation mode -->
+    <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-5">
+        Why These Searches Come From Buyers Who Are Evaluating, Not Just Browsing
+      </h2>
+      <p class="text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-6">
+        {topic.buyerIntentExplanation}
+      </p>
+
+      <!-- Buyer intent signal diagram -->
+      <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 p-5">
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-5">
+          Where this topic type sits in the buyer journey
+        </p>
+        <div class="flex items-center gap-1">
+          {[
+            { label: 'Awareness', sublabel: 'I have a problem', active: false },
+            { label: 'Consideration', sublabel: 'What are my options?', active: false },
+            { label: 'Evaluation', sublabel: 'Comparing solutions', active: true },
+            { label: 'Decision', sublabel: 'Ready to act', active: false },
+          ].map((stage, i) => (
+            <div class="flex-1 text-center">
+              <div class={`rounded-lg py-2.5 px-1 text-center transition-all ${
+                stage.active
+                  ? 'bg-primary text-white shadow-sm'
+                  : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700'
+              }`}>
+                <p class={`text-[11px] font-bold mb-0.5 ${stage.active ? 'text-white' : 'text-gray-700 dark:text-slate-300'}`}>
+                  {stage.label}
+                </p>
+                <p class={`text-[9px] leading-snug ${stage.active ? 'text-primary-200' : 'text-gray-400 dark:text-slate-500'}`}>
+                  {stage.sublabel}
+                </p>
+              </div>
+              {i < 3 && (
+                <div class="relative h-0">
+                  <div class="absolute top-[-12px] right-[-6px] text-slate-300 dark:text-slate-600 text-xs">›</div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        <p class="text-[10px] text-center text-gray-400 dark:text-slate-600 mt-4">
+          Topics in this category primarily target the evaluation and decision stages — where viewers are closest to a purchase.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mid-article CTA: Topic Evaluator -->
+    <div class="my-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl p-6">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+        <div class="flex-1">
+          <p class="font-semibold text-gray-900 dark:text-white mb-1">Check the buyer-intent score for your specific topic</p>
+          <p class="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">
+            Not every topic in this category will work equally well for your audience. Use the YouTube Topic Evaluator to score a specific topic against your target customer.
+          </p>
+        </div>
+        <a
+          href="/tools/youtube-topic-evaluator"
+          class="flex-shrink-0 inline-flex items-center gap-2 bg-primary text-white font-semibold px-5 py-2.5 rounded-full hover:bg-primary/90 transition-all text-sm whitespace-nowrap"
+        >
+          Evaluate a topic free
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Example video titles -->
+    <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+        Example Video Titles in This Category
+      </h2>
+      <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+        These are the types of titles that attract {topic.industryLabel.toLowerCase()} buyers during active evaluation. Use them as directional models when developing your own topics — adjusted for your specific product, service, and target customer.
+      </p>
+      <ul class="space-y-2">
+        {topic.exampleVideoTitles.map((title, i) => (
+          <li class="flex items-start gap-3 bg-slate-50 dark:bg-slate-800 rounded-lg px-4 py-3">
+            <span class="flex-shrink-0 text-xs font-black text-primary/40 dark:text-primary/30 mt-0.5 w-5 text-right">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <span class="text-sm font-medium text-gray-800 dark:text-slate-200 leading-snug">{title}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- How SellOnTube identifies and produces these topics -->
+    <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-5">
+        How to Identify and Validate the Right Topics for Your Business
+      </h2>
+      <p class="text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-8">
+        Not every topic in this category will be right for your business. The ones that convert are specific to your product, your target customer, and the competitive landscape on YouTube. Here is how to find them.
+      </p>
+
+      <div class="space-y-7">
+        {[
+          {
+            num: '01',
+            title: 'Start with your buyer\'s search language',
+            body: `Before you open a keyword tool, write down the exact phrases your target customer would type when they are comparing options or validating a decision. The most effective ${topic.title.toLowerCase()} use the language of the buyer, not the language of the vendor.`,
+          },
+          {
+            num: '02',
+            title: 'Check what already ranks on YouTube',
+            body: 'Type each candidate topic into YouTube and look at the top 5 results. If the first page is dominated by channels with 500K+ subscribers and 3-year-old videos, avoid it. If results are sparse, recent, or from small channels, you have found a gap worth targeting.',
+          },
+          {
+            num: '03',
+            title: 'Evaluate buyer intent, not just search volume',
+            body: 'A topic with 200 monthly searches from people who are actively evaluating solutions will generate more pipeline than a topic with 10,000 monthly searches from people who are learning. Use the YouTube Topic Evaluator to score topics against your specific audience before investing production time.',
+          },
+          {
+            num: '04',
+            title: 'Match the topic to a specific stage of your sales cycle',
+            body: `The best ${topic.title.toLowerCase()} correspond to a real moment in your buyer's decision process. Ask: "At what point in their journey would someone watch this?" If the answer is "during final evaluation," you have a high-converting topic.`,
+          },
+        ].map((step) => (
+          <div class="flex gap-6 items-start">
+            <span class="flex-shrink-0 text-4xl font-black text-primary/20 dark:text-primary/25 leading-none mt-1">
+              {step.num}
+            </span>
+            <div>
+              <p class="font-bold text-lg text-gray-900 dark:text-white mb-2">{step.title}</p>
+              <p class="text-gray-600 dark:text-slate-400 leading-relaxed">{step.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Industry hub link -->
+    <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+        Full YouTube Strategy for {topic.industryLabel}
+      </h2>
+      <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+        {topic.title} is one category within a broader YouTube acquisition strategy for {topic.industryLabel.toLowerCase()}. The full guide covers buyer psychology, acquisition mechanics, the SellOnTube system, and a complete set of high-intent topic categories relevant to your business type.
+      </p>
+      <a
+        href={`/youtube-for-${topic.industryHubSlug}`}
+        class="inline-flex items-center gap-2 bg-white dark:bg-slate-900 border-2 border-primary text-primary font-semibold px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all"
+      >
+        Read the full {topic.industryLabel} guide
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- Related topics -->
+    {relatedTopics.length > 0 && (
+      <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+          Related Topic Categories
+        </h2>
+        <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+          A strong YouTube acquisition strategy uses multiple topic types that work together across the buyer journey. These categories complement {topic.title.toLowerCase()} by reaching buyers at adjacent stages.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-3">
+          {relatedTopics.map((related) => (
+            <a
+              href={`/youtube-topics/${related.slug}`}
+              class="group block bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-4 hover:border-primary hover:shadow-md transition-all duration-200"
+            >
+              <p class="text-xs font-semibold uppercase tracking-wider text-primary mb-1.5">{related.industryLabel}</p>
+              <p class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors leading-snug mb-1.5">
+                {related.title}
+              </p>
+              <p class="text-xs text-gray-500 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                {related.metaDescription}
+              </p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Topic Library link back -->
+    <section class="py-10 border-t border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+        Browse the Full YouTube Topic Library
+      </h2>
+      <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
+        {topic.title} is one of {topics.length} buyer-intent topic categories in the SellOnTube library. Browse the full set organised by business type.
+      </p>
+      <a
+        href="/youtube-topics"
+        class="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors"
+      >
+        View all {topics.length} topic categories
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </section>
+
+  </article>
+
+  <!-- Final CTA -->
+  <CallToAction
+    title={`Ready to build ${topic.title.toLowerCase()} that actually drive pipeline?`}
+    subtitle={`Book a 30-minute call. We'll look at your business, your current acquisition model, and tell you exactly which ${topic.industryLabel.toLowerCase()} topics will generate the most qualified traffic for your specific situation.`}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a free diagnostic call',
+        href: calLink,
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      },
+    ]}
+  />
+</Layout>
