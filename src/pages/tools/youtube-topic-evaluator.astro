@@ -823,6 +823,17 @@ const metadata = {
     ).join('');
   }
 
+  function renderAlternativesNotice(message: string, subtext: string): void {
+    const altLoading = document.getElementById('alternatives-loading') as HTMLElement;
+    const altList = document.getElementById('alternatives-list') as HTMLElement;
+    altLoading.style.display = 'none';
+    altList.innerHTML =
+      '<div class="rounded-xl border border-slate-700/50 bg-slate-800/40 p-5 text-center">' +
+        '<p class="text-sm font-medium text-slate-300">' + message + '</p>' +
+        '<p class="text-xs text-slate-500 mt-1">' + subtext + '</p>' +
+      '</div>';
+  }
+
   async function fetchAlternatives(
     topic: string,
     targetCustomer: string,
@@ -836,6 +847,14 @@ const metadata = {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ topic, targetCustomer, product, scores }),
       });
+      // Quota exhausted — show honest message, do not fall back silently
+      if (res.status === 429) {
+        renderAlternativesNotice(
+          'AI alternatives are at capacity right now.',
+          'Free daily limit reached. Check back tomorrow or try again in a moment.'
+        );
+        return;
+      }
       if (!res.ok) throw new Error('API error');
       const data = await res.json();
       if (Array.isArray(data?.alternatives) && data.alternatives.length > 0) {
@@ -844,7 +863,7 @@ const metadata = {
       }
       throw new Error('Empty response');
     } catch {
-      // Fall back to client-side alternatives silently
+      // Real errors (network, malformed response) — fall back to client-side alternatives
       renderAlternatives(fallback);
     }
   }

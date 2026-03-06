@@ -93,8 +93,12 @@ export default async (request: Request) => {
     });
 
     if (!geminiRes.ok) {
-      const err = await geminiRes.text();
-      console.error('Gemini API error:', err);
+      const errText = await geminiRes.text();
+      console.error('Gemini API error:', geminiRes.status, errText);
+      if (geminiRes.status === 429) {
+        // Free tier limit hit — surface this to the frontend so it can show a user-facing message
+        return new Response(JSON.stringify({ error: 'quota_exceeded' }), { status: 429, headers });
+      }
       return new Response(JSON.stringify({ error: 'AI service unavailable' }), { status: 502, headers });
     }
 
