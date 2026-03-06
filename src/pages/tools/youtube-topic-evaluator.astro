@@ -486,9 +486,34 @@ const metadata = {
   }
 
   function extractTopicCore(topic: string): string {
-    const stop = new Set(['how', 'what', 'is', 'are', 'does', 'do', 'the', 'a', 'an', 'for', 'to', 'in', 'of', 'on', 'at', 'by', 'and', 'or', 'but', 'best', 'top', 'my', 'your', 'our', 'why', 'when', 'which', 'make', 'makes', 'made', 'work', 'works', 'use', 'using', 'with', 'from', 'about', 'that', 'this', 'they']);
+    const stop = new Set([
+      'how', 'what', 'is', 'are', 'does', 'do', 'the', 'a', 'an', 'for', 'to', 'in', 'of',
+      'on', 'at', 'by', 'and', 'or', 'but', 'best', 'top', 'my', 'your', 'our', 'why',
+      'when', 'which', 'make', 'makes', 'made', 'work', 'works', 'use', 'using', 'with',
+      'from', 'about', 'that', 'this', 'they',
+      // Action/modifier verbs — these describe what to do, not what the topic is about
+      'increase', 'increasing', 'improve', 'improving', 'grow', 'growing', 'boost', 'boosting',
+      'maximize', 'maximizing', 'build', 'building', 'scale', 'scaling', 'get', 'getting',
+      'create', 'creating', 'start', 'starting', 'drive', 'driving', 'generate', 'generating',
+      'reduce', 'reducing', 'fix', 'fixing', 'solve', 'solving', 'avoid', 'avoiding',
+      'optimize', 'optimizing', 'manage', 'managing', 'run', 'running',
+    ]);
     const words = topic.split(/\s+/).filter((w) => !stop.has(w.toLowerCase()) && w.length > 2);
-    return words.slice(0, 3).join(' ') || topic.split(' ').slice(0, 2).join(' ');
+    return words.slice(0, 2).join(' ') || topic.split(' ').slice(0, 2).join(' ');
+  }
+
+  // Trim a product label: split at first preposition, take first N words
+  function trimProduct(str: string, maxWords: number): string {
+    const connectors = /\s+(for|to|with|that|which|who|by|on|in|at|of)\s+/i;
+    const segment = str.split(connectors)[0].trim();
+    return segment.split(/\s+/).slice(0, maxWords).join(' ');
+  }
+
+  // Trim a customer label: take the last N meaningful words (the noun, not the qualifier)
+  function trimCustomer(str: string, maxWords: number): string {
+    const words = str.trim().split(/\s+/);
+    if (words.length <= maxWords) return str;
+    return words.slice(-maxWords).join(' ');
   }
 
   function generateAlternatives(
@@ -497,8 +522,8 @@ const metadata = {
     product: string
   ): Array<{ topic: string; explanation: string }> {
     const core = extractTopicCore(topic);
-    const productArea = titleCase(product);
-    const customer = titleCase(targetCustomer);
+    const productArea = titleCase(trimProduct(product, 4));
+    const customer = titleCase(trimCustomer(targetCustomer, 3));
     const customerSingular = customer.replace(/s$/i, '');
 
     return [
