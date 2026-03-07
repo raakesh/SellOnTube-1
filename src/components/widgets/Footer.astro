@@ -1,62 +1,93 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
-import type { Props } from './Footer.astro';
+
+interface FooterLink {
+  text: string;
+  href: string;
+  target?: string;
+  rel?: string;
+}
+
+interface LinkGroup {
+  title: string;
+  links: FooterLink[];
+}
 
 const {
-  links = [],
+  linkGroups = [],
   socialLinks = [],
-  secondaryLinks = [],
   footNote = '',
   theme = 'light',
 } = Astro.props;
 ---
 
-<footer class:list={[{ dark: theme === 'dark' }, 'border-t border-gray-200 dark:border-slate-800 py-10']}>
-  <div class="max-w-3xl mx-auto text-center px-4 dark:text-slate-300">
-    
-    <!-- Brand Name -->
-    <a href="/" class="font-bold text-xl mb-4 block">
-      {SITE?.name}
-    </a>
+<footer class:list={[{ dark: theme === 'dark' }, 'border-t border-gray-200 dark:border-slate-800 pt-12 pb-8']}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
-    <!-- Navigation Links -->
-    {links?.length > 0 && (
-      <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
-        {links.map(({ text, href }) => (
-          <a
-            class="text-muted dark:text-gray-400 hover:text-primary dark:hover:text-white transition"
-            href={href}
-          >
-            {text}
-          </a>
-        ))}
-      </nav>
-    )}
+    {/* Top section: brand + columns */}
+    <div class="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-5 mb-10">
 
-    <!-- Social Icons -->
-    {socialLinks?.length > 0 && (
-      <ul class="flex justify-center gap-4 mb-6">
-        {socialLinks.map(({ ariaLabel, href, icon }) => (
-          <li>
-            <a
-              class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700
-                     rounded-lg p-2.5 inline-flex items-center transition"
-              aria-label={ariaLabel}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {icon && <Icon name={icon} class="w-5 h-5" />}
-            </a>
-          </li>
-        ))}
-      </ul>
-    )}
+      {/* Brand column */}
+      <div class="col-span-2 md:col-span-1">
+        <a href="/" class="font-bold text-xl text-gray-900 dark:text-white hover:text-primary transition">
+          {SITE?.name}
+        </a>
+        <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed max-w-xs">
+          YouTube acquisition systems for B2B founders and SaaS businesses.
+        </p>
+      </div>
 
-    <!-- Copyright -->
-    <div class="text-xs text-muted dark:text-gray-500">
-      © {new Date().getFullYear()} {SITE?.name}. All rights reserved.
+      {/* Link columns */}
+      {linkGroups.map((group: LinkGroup) => (
+        <div>
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400 mb-3">
+            {group.title}
+          </h3>
+          <ul class="space-y-2">
+            {group.links.map((link: FooterLink) => (
+              <li>
+                <a
+                  href={link.href}
+                  target={link.target}
+                  rel={link.rel}
+                  class="text-sm text-gray-600 dark:text-slate-300 hover:text-primary dark:hover:text-white transition"
+                >
+                  {link.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+    </div>
+
+    {/* Bottom section: social + copyright */}
+    <div class="border-t border-gray-200 dark:border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+
+      {socialLinks?.length > 0 && (
+        <ul class="flex gap-3">
+          {socialLinks.map(({ ariaLabel, href, icon }: { ariaLabel: string; href: string; icon: string }) => (
+            <li>
+              <a
+                class="text-gray-400 hover:text-gray-600 dark:hover:text-white rounded-lg p-2 inline-flex items-center transition"
+                aria-label={ariaLabel}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {icon && <Icon name={icon} class="w-5 h-5" />}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <div class="text-xs text-gray-400 dark:text-slate-500">
+        © {new Date().getFullYear()} {SITE?.name}. All rights reserved.
+      </div>
+
     </div>
 
   </div>

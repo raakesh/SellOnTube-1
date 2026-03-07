@@ -16,18 +16,41 @@ export const headerData = {
   ],
 };
 export const footerData = {
-  links: [
-    { text: 'How It Works', href: getPermalink('/how-it-works') },
-    { text: 'About', href: getPermalink('/about') },
-    { text: 'YouTube For', href: getPermalink('/youtube-for') },
-    { text: 'YouTube Vs', href: getPermalink('/youtube-vs') },
-    { text: 'YouTube Topics', href: getPermalink('/youtube-topics') },
-    { text: 'Pricing', href: getPermalink('/pricing') },
-    { text: 'Blog', href: getBlogPermalink() },
-    { text: 'Privacy Policy', href: getPermalink('/privacy-policy') },
-    { text: 'Terms of Service', href: getPermalink('/terms-of-service') },
+  linkGroups: [
+    {
+      title: 'Product',
+      links: [
+        { text: 'How It Works', href: getPermalink('/how-it-works') },
+        { text: 'Pricing', href: getPermalink('/pricing') },
+        { text: 'Book a Call', href: 'https://cal.com/gautham-8bdvdx/30min', target: '_blank', rel: 'noopener noreferrer' },
+      ],
+    },
+    {
+      title: 'Free Tools',
+      links: [
+        { text: 'YouTube Tools', href: getPermalink('/tools') },
+        { text: 'ROI Calculator', href: getPermalink('/tools/youtube-roi-calculator') },
+        { text: 'Topic Evaluator', href: getPermalink('/tools/youtube-topic-evaluator') },
+      ],
+    },
+    {
+      title: 'Explore',
+      links: [
+        { text: 'YouTube For', href: getPermalink('/youtube-for') },
+        { text: 'YouTube Vs', href: getPermalink('/youtube-vs') },
+        { text: 'YouTube Topics', href: getPermalink('/youtube-topics') },
+        { text: 'Blog', href: getBlogPermalink() },
+      ],
+    },
+    {
+      title: 'Company',
+      links: [
+        { text: 'About', href: getPermalink('/about') },
+        { text: 'Privacy Policy', href: getPermalink('/privacy-policy') },
+        { text: 'Terms of Service', href: getPermalink('/terms-of-service') },
+      ],
+    },
   ],
-  secondaryLinks: [],
 
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/SellOnTube' },
@@ -35,5 +58,5 @@ export const footerData = {
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/company/sell-on-youtube' },
   ],
 
-  footNote: `© 2025 SellOnTube. All rights reserved.`,
+  footNote: `© ${new Date().getFullYear()} SellOnTube. All rights reserved.`,
 };
