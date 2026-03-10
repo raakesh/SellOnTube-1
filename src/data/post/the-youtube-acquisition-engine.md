@@ -1,8 +1,8 @@
 ---
 publishDate: 2025-12-22T00:00:00Z
 author: Sathyanand
-title: "The YouTube Acquisition Engine: A Complete Blueprint for Turning Videos into Customers"
-excerpt: "A breakdown of our end-to-end system for converting YouTube videos into predictable customer acquisition - not through entertainment, but strategic voiceover-led content."
+title: "YouTube for Customer Acquisition: The System That Replaces Paid Ads"
+excerpt: "YouTube works as a B2B acquisition channel when you treat it as search, not social. Here's the end-to-end system: search-led topics, voiceover videos, leads that compound without ad spend."
 image: ~/assets/images/blog/creative-workspace.jpg
 category: YouTube Strategy
 tags:

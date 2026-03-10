@@ -1,8 +1,8 @@
 ---
 publishDate: 2026-02-27T00:00:00Z
 author: Sathyanand
-title: "YouTube Marketing ROI: How to Calculate It (Real Data Included)"
-excerpt: "Most businesses measure YouTube marketing ROI wrong. Here's the formula, real 12-month data (3.25x more conversions than blogging), and a free calculator."
+title: "YouTube Marketing ROI: Formula, Real Case Study Data + Free Calculator"
+excerpt: "YouTube drove 3.25x more conversions than blogging in our 12-month case study. Here's the exact ROI formula, real benchmarks by business type, and a free calculator for your numbers."
 image: ~/assets/images/growth-analytics-dashboard.jpg
 category: YouTube Strategy
 tags:
@@ -13,7 +13,7 @@ tags:
   - ltv
 metadata:
   canonical: https://sellontube.com/blog/youtube-marketing-roi
-  description: "Most businesses measure YouTube marketing ROI wrong. Here's the formula, real 12-month data (3.25x more conversions than blogging), and a free calculator."
+  description: "YouTube drove 3.25x more conversions than blogging in our 12-month case study. Here's the exact ROI formula, real benchmarks by business type, and a free calculator for your numbers."
   openGraph:
     url: https://sellontube.com/blog/youtube-marketing-roi
     siteName: SellOnTube
