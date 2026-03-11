@@ -29,3 +29,6 @@ scripts/seo_data/*.json
 # Keyword research — ignore binary Excel files, but commit CSVs (plain text, diffable)
 research/**/*.xlsx
 research/**/*.xls
+
+# Claude Code local settings — contains GitHub tokens and machine-specific paths
+.claude/

@@ -1,0 +1,367 @@
+rank,keyword,search_volume,cpc_usd,keyword_difficulty,intent,category,cluster
+1,youtube ads,50000,4979.0,41,informational,YouTube Advertising,youtube_general
+2,youtube advertising,50000,4979.0,41,informational,YouTube Advertising,youtube_general
+3,youtube seo,50000,376.36,15,technical,YouTube SEO,youtube_seo
+4,youtube seo optimization,50000,376.36,15,technical,YouTube SEO,youtube_seo
+5,youtube advertising best practices,500,10840.36,6,transactional,YouTube Advertising,youtube_general
+6,youtube ads video,5000,5228.64,24,informational,YouTube Advertising,youtube_general
+7,animated explainer video production,500,3823.0,6,informational,Explainer Video,video_production
+8,animated explainer video company,500,3823.0,6,informational,Explainer Video,video_marketing_general
+9,animated explainer video service,500,3733.4,6,transactional,Explainer Video,video_marketing_general
+10,youtube advertising services,500,3746.49,8,informational,Agency / Services,youtube_general
+11,youtube marketing company,500,3649.82,7,informational,Agency / Services,youtube_general
+12,animated explainer video production company,500,2980.8,3,informational,Explainer Video,video_production
+13,youtube marketing services,5000,1557.78,3,informational,Agency / Services,youtube_general
+14,youtube ads campaign,5000,4869.03,57,informational,YouTube Advertising,youtube_general
+15,youtube advertising campaign,5000,4869.03,57,informational,YouTube Advertising,youtube_general
+16,youtube seo services,5000,1368.95,1,technical,Agency / Services,youtube_seo
+17,youtube advertising agency,5000,1701.52,7,transactional,Agency / Services,youtube_general
+18,youtube ads agency,5000,1701.52,7,transactional,Agency / Services,youtube_general
+19,youtube marketing,5000,2423.72,20,informational,YouTube for Business,youtube_general
+20,explainer video company,500,3036.67,11,informational,Explainer Video,video_marketing_general
+21,youtube businesses,500,2780.79,7,informational,YouTube for Business,youtube_general
+22,explainer video agency,500,3467.03,20,transactional,Explainer Video,video_marketing_general
+23,youtube advertising options,500,2660.95,8,informational,YouTube Advertising,youtube_general
+24,video seo,5000,952.31,1,technical,YouTube SEO,youtube_seo
+25,best explainer video companies,500,2684.33,9,transactional,Explainer Video,video_marketing_general
+26,explainer video services,500,2597.74,8,informational,Explainer Video,video_marketing_general
+27,explainer video production,500,2307.66,5,informational,Explainer Video,video_production
+28,youtube advertising cost,5000,2597.74,33,transactional,YouTube Advertising,youtube_general
+29,youtube advertising google,500,4178.64,39,informational,YouTube Advertising,youtube_general
+30,corporate explainer video production,500,2621.24,15,informational,Explainer Video,video_production
+31,youtube video marketing,500,1790.71,2,informational,Video Marketing Strategy,youtube_general
+32,youtube seo tools,5000,472.66,1,technical,YouTube SEO,youtube_seo
+33,youtube video seo optimization,5000,525.61,2,technical,YouTube SEO,youtube_seo
+34,youtube video seo,5000,525.61,2,technical,YouTube SEO,youtube_seo
+35,animated explainer video,500,2880.89,21,informational,Explainer Video,video_marketing_general
+36,youtube metrics,5000,399.4,2,informational,Analytics & ROI,youtube_general
+37,video testimonial,5000,25.26,0,,Video Testimonial,
+38,youtube advertising reddit,5000,24.94,0,informational,YouTube Advertising,youtube_general
+39,animated explainer videos,5000,24.11,0,,Explainer Video,
+40,youtube seo agency,500,1338.7,1,transactional,Agency / Services,youtube_seo
+41,explainer videos,5000,18.85,0,,Explainer Video,
+42,2d explainer video,500,2754.47,24,informational,Explainer Video,video_marketing_general
+43,video marketing strategy,5000,12.8,0,,Video Marketing Strategy,
+44,video marketing techniques,5000,12.8,0,,Video Marketing Strategy,
+45,make explainer videos,5000,12.26,0,,Explainer Video,
+46,video marketing digital,5000,5.2,0,,Video Marketing Strategy,
+47,explainer video pricing,500,1731.82,8,informational,Explainer Video,video_marketing_general
+48,explainer video cost,500,1731.82,8,transactional,Explainer Video,video_marketing_general
+49,startup explainer video,500,1473.78,4,informational,Explainer Video,video_marketing_general
+50,3d explainer video,500,2366.54,19,informational,Explainer Video,video_marketing_general
+51,youtube channel promotion,5000,1110.1,20,informational,YouTube for Business,youtube_general
+52,youtube analytics for other channels,5000,225.3,6,technical,Analytics & ROI,youtube_general
+53,youtube seo company,500,1403.03,5,technical,Agency / Services,youtube_seo
+54,youtube business,500,1683.81,10,informational,YouTube for Business,youtube_growth_strategy
+55,youtube ads analytics,500,1727.39,12,technical,YouTube Advertising,youtube_general
+56,explainer video,5000,2082.52,38,informational,Explainer Video,video_marketing_general
+57,youtube advertising pricing,500,2605.53,27,informational,YouTube Advertising,youtube_general
+58,marketing agency youtube,500,1982.07,18,transactional,Agency / Services,youtube_general
+59,youtube marketing agency,500,1982.07,18,transactional,Agency / Services,youtube_general
+60,youtube marketing strategy,500,1078.06,4,strategic,YouTube for Business,youtube_general
+61,free youtube seo tools,5000,246.64,11,transactional,YouTube SEO,youtube_seo
+62,youtube seo tool free,5000,246.64,11,transactional,YouTube SEO,youtube_seo
+63,youtube seo tools free,5000,246.64,11,transactional,YouTube SEO,youtube_seo
+64,motion graphics explainer video,500,1983.81,19,informational,Explainer Video,video_marketing_general
+65,product explainer video,500,2757.93,33,informational,Explainer Video,video_marketing_general
+66,youtube seo keywords,5000,209.94,13,technical,YouTube SEO,youtube_seo
+67,youtube channel promotion services,500,906.02,5,informational,YouTube for Business,youtube_general
+68,lead gen youtube,500,1338.97,12,informational,YouTube Lead Gen,youtube_growth_strategy
+69,youtube lead gen,500,1338.97,12,informational,YouTube Lead Gen,youtube_growth_strategy
+70,youtube business channel,500,860.09,6,informational,YouTube for Business,youtube_growth_strategy
+71,youtube strategy,5000,295.55,18,strategic,YouTube for Business,youtube_general
+72,youtube seo software,500,522.3,3,transactional,YouTube SEO,youtube_seo
+73,youtube seo strategy,500,483.18,3,technical,YouTube SEO,youtube_seo
+74,youtube content strategy,500,600.94,5,strategic,YouTube for Business,youtube_general
+75,youtube seo best practices,500,345.5,3,transactional,YouTube SEO,youtube_seo
+76,saas explainer video,500,1768.19,26,informational,Explainer Video,video_marketing_general
+77,best tools for youtube seo,500,359.29,4,transactional,YouTube SEO,youtube_seo
+78,youtube analytics for other channels free,500,201.41,2,transactional,Analytics & ROI,youtube_general
+79,youtube seo tips,500,193.96,2,technical,YouTube SEO,youtube_seo
+80,youtube seo optimization tips,500,193.96,2,technical,YouTube SEO,youtube_seo
+81,fiverr youtube seo,500,621.29,9,technical,YouTube SEO,youtube_seo
+82,youtube business advertising,500,61.98,0,,YouTube for Business,
+83,youtube advertising platform,500,39.67,0,,YouTube Advertising,
+84,youtube marketing campaign,500,39.59,0,,YouTube for Business,
+85,video marketing best practices,500,32.39,0,,Video Marketing Strategy,
+86,video marketing stats,500,31.38,0,,Video Marketing Strategy,
+87,explainer videos for business,500,29.83,0,,Explainer Video,
+88,customer video testimonials,500,29.4,0,,Video Testimonial,
+89,customer testimonial video,500,29.24,0,,Video Testimonial,
+90,best youtube advertising,500,26.21,0,,YouTube Advertising,
+91,best explainer videos,500,23.79,0,,Explainer Video,
+92,great explainer videos,500,23.79,0,,Explainer Video,
+93,good explainer videos,500,23.79,0,,Explainer Video,
+94,video marketing statistics,500,22.23,0,,Video Marketing Strategy,
+95,video marketing for realtors,500,21.82,0,,Video Marketing Strategy,
+96,video marketing for real estate agents,500,21.82,0,,Video Marketing Strategy,
+97,personalized video marketing,500,19.85,0,,Video Marketing Strategy,
+98,personalised video marketing,500,19.85,0,,Video Marketing Strategy,
+99,youtube advertising companies,500,17.56,0,,YouTube Advertising,
+100,youtube advertising company,500,17.56,0,,YouTube Advertising,
+101,youtube advertising strategy,500,16.91,0,,YouTube Advertising,
+102,b2b video marketing,500,16.61,0,,Video Marketing Strategy,
+103,whiteboard explainer video,500,2615.4,42,informational,Explainer Video,video_marketing_general
+104,youtube advertising specialist,500,13.01,0,,YouTube Advertising,
+105,video explainer video,500,2676.54,43,informational,Explainer Video,video_marketing_general
+106,short video marketing,500,12.79,0,,Video Marketing Strategy,
+107,video marketing software,500,12.51,0,,Video Marketing Strategy,
+108,product video marketing,500,12.46,0,,Video Marketing Strategy,
+109,reddit youtube advertising,500,10.98,0,informational,YouTube Advertising,youtube_general
+110,b2b video,500,10.67,0,,Video Marketing Strategy,
+111,explainer video examples,500,9.1,0,,Explainer Video,
+112,examples of explainer videos,500,9.1,0,,Explainer Video,
+113,video marketing trend,500,7.56,0,,Video Marketing Strategy,
+114,create explainer videos,500,7.46,0,,Explainer Video,
+115,real estate video marketing services,500,6.15,0,,Agency / Services,
+116,advantage of video marketing,500,5.8,0,,Video Marketing Strategy,
+117,youtube seo description,500,376.79,6,technical,YouTube SEO,youtube_seo
+118,rep video marketing,500,0.81,0,,Video Marketing Strategy,
+119,youtube business accounts,500,0.0,0,informational,YouTube for Business,youtube_growth_strategy
+120,youtube channel optimization and video seo,500,0.0,0,technical,YouTube SEO,youtube_seo
+121,video seo expert,500,0.0,0,technical,YouTube SEO,youtube_seo
+122,youtube seo ahrefs,500,0.0,0,technical,YouTube SEO,youtube_seo
+123,ahrefs youtube seo,500,0.0,0,technical,YouTube SEO,youtube_seo
+124,youtube video marketing company,500,0.0,0,informational,Agency / Services,youtube_general
+125,youtube marketing tools,500,0.0,0,informational,YouTube for Business,youtube_general
+126,importance of video marketing,500,0,0,,Video Marketing Strategy,
+127,define video marketing,500,0,0,,Video Marketing Strategy,
+128,video content marketing strategy,500,0,0,,Video Marketing Strategy,
+129,digital video strategy,500,0,0,,Video Marketing Strategy,
+130,youtube seo meaning,500,116.27,2,technical,YouTube SEO,youtube_seo
+131,youtube seo tool,500,469.32,8,transactional,YouTube SEO,youtube_seo
+132,youtube seo guidelines,500,198.85,4,technical,YouTube SEO,youtube_seo
+133,youtube video marketing services,500,11.29,1,informational,Agency / Services,youtube_general
+134,youtube ads promotion,50,72.56,0,,YouTube Advertising,
+135,youtube seo ranking,500,434.39,8,technical,YouTube SEO,youtube_seo
+136,video seo tools,500,0.0,1,technical,YouTube SEO,youtube_seo
+137,keyword research for youtube seo,500,0.0,1,technical,YouTube SEO,youtube_seo
+138,youtube video seo service,500,0.0,1,transactional,Agency / Services,youtube_seo
+139,best youtube marketing,50,40.03,0,,YouTube for Business,
+140,organic youtube marketing,50,39.36,0,,YouTube for Business,
+141,youtube advertising for small business,50,35.78,0,,YouTube Advertising,
+142,youtube ads marketing agency,50,32.93,0,,Agency / Services,
+143,b2b youtube strategy,50,32.45,0,,YouTube for Business,
+144,youtube seo description generator,500,215.92,5,technical,YouTube SEO,youtube_seo
+145,b2b video ads,50,29.83,0,,Video Marketing Strategy,
+146,youtube for business marketing,50,29.29,0,,YouTube for Business,
+147,promotional video marketing,50,27.31,0,,Video Marketing Strategy,
+148,youtube marketing for real estate,50,27.21,0,,YouTube for Business,
+149,buy youtube marketing,50,25.52,0,,YouTube for Business,
+150,b2b video marketing strategy,50,23.81,0,,Video Marketing Strategy,
+151,short explainer videos,50,23.67,0,,Explainer Video,
+152,youtube marketing online,50,23.65,0,,YouTube for Business,
+153,youtube seo marketing,50,23.32,0,,YouTube SEO,
+154,best video testimonials,50,22.83,0,,Video Testimonial,
+155,property video marketing,50,22.8,0,,Video Marketing Strategy,
+156,youtube marketing consultant,50,21.98,0,,YouTube for Business,
+157,youtube marketing specialist,50,21.71,0,,YouTube for Business,
+158,hubspot youtube marketing,50,19.81,0,,YouTube for Business,
+159,hubspot video marketing,50,19.79,0,,Video Marketing Strategy,
+160,video marketing hubspot,50,19.79,0,,Video Marketing Strategy,
+161,explainer video best practices,50,18.42,0,,Explainer Video,
+162,youtube advertising 101,50,18.15,0,,YouTube Advertising,
+163,youtube advertising website,50,17.94,0,,YouTube Advertising,
+164,youtube marketing platform,50,17.01,0,,YouTube for Business,
+165,create animated explainer video,50,16.18,0,,Explainer Video,
+166,best youtube channel promotion,50,15.98,0,,YouTube for Business,
+167,saas video marketing,50,13.98,0,,Video Marketing Strategy,
+168,cheap youtube advertising,50,13.68,0,,YouTube Advertising,
+169,best b2b videos,50,13.06,0,,Video Marketing Strategy,
+170,video marketing ideas for small business,50,12.03,0,,Video Marketing Strategy,
+171,storytelling video marketing,50,11.61,0,,Video Marketing Strategy,
+172,best product explainer videos,50,11.58,0,,Explainer Video,
+173,best youtube marketing agency,50,10.6,0,,Agency / Services,
+174,best youtube marketing agencies,50,10.6,0,,YouTube for Business,
+175,video marketing strategy examples,50,10.44,0,,Video Marketing Strategy,
+176,video marketing plan,50,10.28,0,,Video Marketing Strategy,
+177,youtube seo consultant,50,10.26,0,,YouTube SEO,
+178,b2b video examples,50,10.2,0,,Video Marketing Strategy,
+179,youtube video marketing agency,50,8.86,0,,Agency / Services,
+180,youtube marketing ads,50,8.32,0,,YouTube for Business,
+181,youtube marketing packages,50,8.3,0,,YouTube for Business,
+182,learn youtube advertising,50,7.88,0,,YouTube Advertising,
+183,simple explainer video,50,7.81,0,,Explainer Video,
+184,product explainer video examples,50,7.65,0,,Explainer Video,
+185,free video marketing,50,7.62,0,,Video Marketing Strategy,
+186,best youtube channel promotion sites,50,6.95,0,,YouTube for Business,
+187,video marketing saas,50,6.79,0,,Video Marketing Strategy,
+188,animated explainer video examples,50,6.38,0,,Explainer Video,
+189,youtube video marketing strategy,50,6.34,0,,Video Marketing Strategy,
+190,youtube marketing cost,50,6.24,0,,YouTube for Business,
+191,website explainer video,50,5.89,0,,Explainer Video,
+192,youtube marketing price,50,5.7,0,,YouTube for Business,
+193,best explainer video examples,50,5.46,0,,Explainer Video,
+194,best b2b video ads,50,4.97,0,,Video Marketing Strategy,
+195,explainer video meaning,50,4.21,0,,Explainer Video,
+196,youtube marketing agency near me,50,4.06,0,,Agency / Services,
+197,explainer video ideas,50,3.9,0,,Explainer Video,
+198,fiverr youtube marketing,50,3.85,0,,YouTube for Business,
+199,learn youtube marketing,50,2.83,0,,YouTube for Business,
+200,youtube business analyst,500,0.0,2,informational,YouTube for Business,youtube_growth_strategy
+201,youtube channel promotion website,50,1.31,0,,YouTube for Business,
+202,youtube marketing for beginners,50,1.11,0,,YouTube for Business,
+203,youtube marketing services near me,50,0.62,0,,Agency / Services,
+204,youtube channel promotion company,50,0.35,0,,YouTube for Business,
+205,best youtube marketing services,50,0,0,,Agency / Services,
+206,paid youtube channel promotion,50,0,0,,YouTube for Business,
+207,youtube advertising cost 2022,50,0,0,,YouTube Advertising,
+208,youtube seo promotion,50,0,0,,YouTube SEO,
+209,b2b video marketing examples,50,0,0,,Video Marketing Strategy,
+210,top youtube marketing companies,50,0,0,,YouTube for Business,
+211,b2b video content marketing,50,0,0,,Video Marketing Strategy,
+212,best youtube advertising campaigns,50,0,0,,YouTube Advertising,
+213,youtube advertising packages,50,0,0,,YouTube Advertising,
+214,youtube marketing strategy 2022,50,0,0,,YouTube for Business,
+215,digital marketing agency youtube,50,0,0,,Agency / Services,
+216,best youtube marketing companies,50,0,0,,YouTube for Business,
+217,youtube marketing near me,50,0,0,,YouTube for Business,
+218,best youtube marketing strategy,50,0,0,,YouTube for Business,
+219,youtube advertising products,50,0,0,,YouTube Advertising,
+220,clickbank youtube ads,50,0,0,,YouTube Advertising,
+221,youtube advertising for beginners,50,0,0,,YouTube Advertising,
+222,youtube channel promotion agency,50,0,0,,YouTube for Business,
+223,youtube ads digital marketing,50,0,0,,YouTube Advertising,
+224,youtube marketing for small business,50,0,0,,YouTube for Business,
+225,youtube ads for b2b,50,0,0,,YouTube Advertising,
+226,youtube channel promotion paid,50,0,0,,YouTube for Business,
+227,youtube marketing for dummies,50,0,0,,YouTube for Business,
+228,youtube advertising in digital marketing,50,0,0,,YouTube Advertising,
+229,youtube marketing fiverr,50,0,0,,YouTube for Business,
+230,cost of youtube marketing,50,0,0,,YouTube for Business,
+231,agm marketing agency youtube seo,50,0,0,,Agency / Services,
+232,alex king youtube marketing,50,0,0,,YouTube for Business,
+233,auto dealer youtube marketing agency,50,0,0,,Agency / Services,
+234,automotive dealer youtube marketing agency,50,0,0,,Agency / Services,
+235,best youtube ads strategy,50,0,0,,YouTube Advertising,
+236,best youtube marketing campaigns,50,0,0,,YouTube for Business,
+237,cpa youtube marketing,50,0,0,,YouTube for Business,
+238,digital marketing agency youtube video,50,0,0,,Agency / Services,
+239,ecommerce youtube marketing,50,0,0,,YouTube for Business,
+240,lenos youtube marketing,50,0,0,,YouTube for Business,
+241,neil patel youtube marketing,50,0,0,,YouTube for Business,
+242,nft youtube marketing,50,0,0,,YouTube for Business,
+243,reddit youtube marketing,50,0,0,,YouTube for Business,
+244,successful youtube marketing campaigns,50,0,0,,YouTube for Business,
+245,udemy youtube marketing,50,0,0,,YouTube for Business,
+246,viking youtube marketing,50,0,0,,YouTube for Business,
+247,youtube ads clickbank,50,0,0,,YouTube Advertising,
+248,youtube ads marketing strategy,50,0,0,,YouTube Advertising,
+249,youtube ads secrets,50,0,0,,YouTube Advertising,
+250,youtube advertising 2022,50,0,0,,YouTube Advertising,
+251,youtube advertising cost 2020,50,0,0,,YouTube Advertising,
+252,youtube advertising cost 2021,50,0,0,,YouTube Advertising,
+253,youtube advertising cost per view,50,0,0,,YouTube Advertising,
+254,youtube advertising mail,50,0,0,,YouTube Advertising,
+255,youtube advertising on my videos,50,0,0,,YouTube Advertising,
+256,youtube advertising online video advertising campaigns,50,0,0,,YouTube Advertising,
+257,youtube advertising sign up,50,0,0,,YouTube Advertising,
+258,youtube and video marketing,50,0,0,,Video Marketing Strategy,
+259,youtube marketing 2021,50,0,0,,YouTube for Business,
+260,youtube marketing 2022,50,0,0,,YouTube for Business,
+261,youtube marketing 2023,50,0,0,,YouTube for Business,
+262,youtube marketing analysis,50,0,0,,YouTube for Business,
+263,youtube marketing b2b,50,0,0,,YouTube for Business,
+264,youtube marketing bangla,50,0,0,,YouTube for Business,
+265,youtube marketing best practices,50,0,0,,YouTube for Business,
+266,youtube marketing by golzer,50,0,0,,YouTube for Business,
+267,youtube marketing content,50,0,0,,YouTube for Business,
+268,youtube marketing firm,50,0,0,,YouTube for Business,
+269,youtube marketing for b2b,50,0,0,,YouTube for Business,
+270,youtube marketing for ecommerce,50,0,0,,YouTube for Business,
+271,youtube marketing for law firms,50,0,0,,YouTube for Business,
+272,youtube marketing for musicians,50,0,0,,YouTube for Business,
+273,youtube marketing google,50,0,0,,YouTube for Business,
+274,youtube marketing hub,50,0,0,,YouTube for Business,
+275,youtube marketing in hindi,50,0,0,,YouTube for Business,
+276,youtube marketing influencer,50,0,0,,YouTube for Business,
+277,youtube marketing itechaxis,50,0,0,,YouTube for Business,
+278,youtube marketing ki,50,0,0,,YouTube for Business,
+279,youtube marketing secrets,50,0,0,,YouTube for Business,
+280,youtube marketing strategy 2020,50,0,0,,YouTube for Business,
+281,youtube marketing strategy 2021,50,0,0,,YouTube for Business,
+282,youtube marketing udemy,50,0,0,,YouTube for Business,
+283,youtube video seo marketing,50,0,0,,YouTube SEO,
+284,youtube video seo services,50,0,0,,Agency / Services,
+285,video marketing strategy template,50,0,0,,Video Marketing Strategy,
+286,best video marketing software,50,0,0,,Video Marketing Strategy,
+287,video content strategy example,50,0,0,,Video Marketing Strategy,
+288,video marketing tools free,50,0,0,,Video Marketing Strategy,
+289,best video marketing tools,50,0,0,,Video Marketing Strategy,
+290,b2b video marketing statistics,50,0,0,,Video Marketing Strategy,
+291,explainer video marketing,50,0,0,,Explainer Video,
+292,creating a video marketing strategy,50,0,0,,Video Marketing Strategy,
+293,video marketing singapore,50,0,0,,Video Marketing Strategy,
+294,b2b video content,50,0,0,,Video Marketing Strategy,
+295,b2b video strategy,50,0,0,,Video Marketing Strategy,
+296,explainer video process,50,0,0,,Explainer Video,
+297,social media video marketing strategy,50,0,0,,Video Marketing Strategy,
+298,real estate video marketing ideas,50,0,0,,Video Marketing Strategy,
+299,video marketing plan template,50,0,0,,Video Marketing Strategy,
+300,effective video marketing,50,0,0,,Video Marketing Strategy,
+301,ecommerce video marketing,50,0,0,,Video Marketing Strategy,
+302,b2b video content ideas,50,0,0,,Video Marketing Strategy,
+303,video marketing tips for small businesses,50,0,0,,Video Marketing Strategy,
+304,video marketing report,50,0,0,,Video Marketing Strategy,
+305,digital video marketing strategy,50,0,0,,Video Marketing Strategy,
+306,facts about video marketing,50,0,0,,Video Marketing Strategy,
+307,video marketing ideas for real estate agents,50,0,0,,Video Marketing Strategy,
+308,statistics video marketing,50,0,0,,Video Marketing Strategy,
+309,engage video marketing,50,0,0,,Video Marketing Strategy,
+310,video marketing campaign strategy,50,0,0,,Video Marketing Strategy,
+311,companies that use video marketing,50,0,0,,Video Marketing Strategy,
+312,corporate video strategy,50,0,0,,Video Marketing Strategy,
+313,advantages and disadvantages of video marketing,50,0,0,,Video Marketing Strategy,
+314,b2b video ideas,50,0,0,,Video Marketing Strategy,
+315,explain video marketing,50,0,0,,Video Marketing Strategy,
+316,explainer video blog,50,0,0,,Explainer Video,
+317,explainer video definition,50,0,0,,Explainer Video,
+318,explainer video tips,50,0,0,,Explainer Video,
+319,online video marketing strategy,50,0,0,,Video Marketing Strategy,
+320,personalized video marketing solutions,50,0,0,,Video Marketing Strategy,
+321,roi of video marketing,50,0,0,,Video Marketing Strategy,
+322,the importance of video marketing,50,0,0,,Video Marketing Strategy,
+323,tips video marketing,50,0,0,,Video Marketing Strategy,
+324,video content marketing platform,50,0,0,,Video Marketing Strategy,
+325,video marketing channels,50,0,0,,Video Marketing Strategy,
+326,video marketing checklist,50,0,0,,Video Marketing Strategy,
+327,video marketing conversion rate,50,0,0,,Video Marketing Strategy,
+328,video marketing engagement,50,0,0,,Video Marketing Strategy,
+329,video marketing for your business,50,0,0,,Video Marketing Strategy,
+330,video marketing goals,50,0,0,,Video Marketing Strategy,
+331,video marketing metrics,50,0,0,,Video Marketing Strategy,
+332,video marketing mix,50,0,0,,Video Marketing Strategy,
+333,video marketing objectives,50,0,0,,Video Marketing Strategy,
+334,video marketing roi,50,0,0,,Video Marketing Strategy,
+335,video marketing statistics 2020,50,0,0,,Video Marketing Strategy,
+336,video marketing statistics 2021,50,0,0,,Video Marketing Strategy,
+337,video marketing tactics,50,0,0,,Video Marketing Strategy,
+338,video marketing topics,50,0,0,,Video Marketing Strategy,
+339,video marketing funnel,50,0,0,,Video Marketing Strategy,
+340,youtube seo for beginners,500,196.29,6,technical,YouTube SEO,youtube_seo
+341,youtube seo score,500,361.09,9,technical,YouTube SEO,youtube_seo
+342,best youtube seo tools,500,507.79,12,transactional,YouTube SEO,youtube_seo
+343,youtube seo expert,500,568.34,13,technical,YouTube SEO,youtube_seo
+344,youtube seo checker,500,196.29,7,technical,YouTube SEO,youtube_seo
+345,youtube channel promotion sites,500,606.61,16,informational,YouTube for Business,youtube_general
+346,youtube seo search,500,524.86,15,technical,YouTube SEO,youtube_seo
+347,optimize youtube seo,500,524.86,15,technical,YouTube SEO,youtube_seo
+348,youtube video seo checker,500,187.15,10,technical,YouTube SEO,youtube_seo
+349,youtube seo generator,500,270.54,12,technical,YouTube SEO,youtube_seo
+350,free youtube seo,500,330.28,13,transactional,YouTube SEO,youtube_seo
+351,youtube seo extension,500,158.69,11,technical,YouTube SEO,youtube_seo
+352,youtube channel strategy,500,279.92,13,strategic,YouTube for Business,youtube_general
+353,youtube seo title generator,500,138.25,11,technical,YouTube SEO,youtube_seo
+354,youtube growth strategy,500,357.07,17,strategic,YouTube for Business,youtube_growth_strategy
+355,make money with youtube ads,500,247.42,16,monetization,YouTube Advertising,youtube_monetization
+356,best youtube seo tools free,500,192.02,22,transactional,YouTube SEO,youtube_seo
+357,best youtube seo tool,500,698.83,32,transactional,YouTube SEO,youtube_seo
+358,create youtube channel for business,500,555.89,30,informational,YouTube for Business,youtube_growth_strategy
+359,free youtube seo tool,500,250.05,26,transactional,YouTube SEO,youtube_seo
+360,best youtube seo,500,598.25,32,transactional,YouTube SEO,youtube_seo
+361,ai video marketing,5000,547.09,53,informational,Video Marketing Strategy,video_marketing_general
+362,youtube seo ai,500,286.33,29,technical,YouTube SEO,youtube_seo
+363,explainer video generator,500,773.76,41,informational,Explainer Video,video_marketing_general
+364,ai explainer video,500,762.87,52,informational,Explainer Video,video_marketing_general
+365,free youtube channel promotion app,500,416.5,48,transactional,YouTube for Business,youtube_tools_software
+366,ai explainer videos,500,601.81,58,informational,Explainer Video,video_marketing_general

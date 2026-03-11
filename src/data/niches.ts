@@ -414,7 +414,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'course-creators',
-    publishDate: '2026-03-16',
+    publishDate: '2026-03-17',
     name: 'Course Creators',
     shortName: 'Course Creators',
     metaTitle: 'YouTube Marketing for Course Creators | SellOnTube',
@@ -686,7 +686,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'marketing-agencies',
-    publishDate: '2026-03-16',
+    publishDate: '2026-03-13',
     name: 'Marketing Agencies',
     shortName: 'Marketing Agencies',
     metaTitle: 'YouTube Marketing for Marketing Agencies | SellOnTube',
@@ -754,7 +754,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'software-companies',
-    publishDate: '2026-04-06',
+    publishDate: '2026-03-15',
     name: 'Software Companies',
     shortName: 'Software',
     metaTitle: 'YouTube Marketing for Software Companies | SellOnTube',
@@ -822,7 +822,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'fintech-companies',
-    publishDate: '2026-04-06',
+    publishDate: '2026-04-05',
     name: 'Fintech Companies',
     shortName: 'Fintech',
     metaTitle: 'YouTube Marketing for Fintech Companies | SellOnTube',
@@ -890,7 +890,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'hr-software',
-    publishDate: '2026-04-13',
+    publishDate: '2026-04-08',
     name: 'HR Software Companies',
     shortName: 'HR Software',
     metaTitle: 'YouTube Marketing for HR Software Companies | SellOnTube',
@@ -958,7 +958,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'edtech-companies',
-    publishDate: '2026-04-13',
+    publishDate: '2026-03-28',
     name: 'EdTech Companies',
     shortName: 'EdTech',
     metaTitle: 'YouTube Marketing for EdTech Companies | SellOnTube',
@@ -1026,7 +1026,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'cybersecurity-companies',
-    publishDate: '2026-04-13',
+    publishDate: '2026-04-07',
     name: 'Cybersecurity Companies',
     shortName: 'Cybersecurity',
     metaTitle: 'YouTube Marketing for Cybersecurity Companies | SellOnTube',
@@ -1094,7 +1094,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'accountants',
-    publishDate: '2026-04-06',
+    publishDate: '2026-03-30',
     name: 'Accounting Firms',
     shortName: 'Accountants',
     metaTitle: 'YouTube Marketing for Accounting Firms | SellOnTube',
@@ -1162,7 +1162,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'insurance-agents',
-    publishDate: '2026-03-30',
+    publishDate: '2026-04-10',
     name: 'Insurance Agents',
     shortName: 'Insurance Agents',
     metaTitle: 'YouTube Marketing for Insurance Agents | SellOnTube',
@@ -1230,7 +1230,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'mortgage-brokers',
-    publishDate: '2026-04-06',
+    publishDate: '2026-04-19',
     name: 'Mortgage Brokers',
     shortName: 'Mortgage Brokers',
     metaTitle: 'YouTube Marketing for Mortgage Brokers | SellOnTube',
@@ -1298,7 +1298,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'recruiting-firms',
-    publishDate: '2026-03-16',
+    publishDate: '2026-04-01',
     name: 'Recruiting Firms',
     shortName: 'Recruiting Firms',
     metaTitle: 'YouTube Marketing for Recruiting Firms | SellOnTube',
@@ -1366,7 +1366,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'management-consultants',
-    publishDate: '2026-03-16',
+    publishDate: '2026-04-03',
     name: 'Management Consultants',
     shortName: 'Management Consultants',
     metaTitle: 'YouTube Marketing for Management Consultants | SellOnTube',
@@ -1502,7 +1502,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'life-coaches',
-    publishDate: '2026-03-23',
+    publishDate: '2026-03-24',
     name: 'Life Coaches',
     shortName: 'Life Coaches',
     metaTitle: 'YouTube Marketing for Life Coaches | SellOnTube',
@@ -1570,7 +1570,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'professional-services',
-    publishDate: '2026-03-23',
+    publishDate: '2026-03-26',
     name: 'Professional Services Firms',
     shortName: 'Professional Services',
     metaTitle: 'YouTube Marketing for Professional Services Firms | SellOnTube',
@@ -1638,7 +1638,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'startup-founders',
-    publishDate: '2026-03-23',
+    publishDate: '2026-03-12',
     name: 'Startups and Founders',
     shortName: 'Startups',
     metaTitle: 'YouTube Marketing for Startups | SellOnTube',
@@ -1706,7 +1706,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'ecommerce',
-    publishDate: '2026-03-30',
+    publishDate: '2026-03-21',
     name: 'E-commerce Businesses',
     shortName: 'E-commerce',
     metaTitle: 'YouTube Marketing for E-commerce Businesses | SellOnTube',
@@ -1774,7 +1774,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'healthcare-practices',
-    publishDate: '2026-03-30',
+    publishDate: '2026-04-12',
     name: 'Healthcare Practices',
     shortName: 'Healthcare',
     metaTitle: 'YouTube Marketing for Healthcare Practices | SellOnTube',
@@ -1842,7 +1842,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'dental-practices',
-    publishDate: '2026-03-30',
+    publishDate: '2026-04-14',
     name: 'Dental Practices',
     shortName: 'Dental Practices',
     metaTitle: 'YouTube Marketing for Dental Practices | SellOnTube',
@@ -1910,7 +1910,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'subscription-businesses',
-    publishDate: '2026-04-13',
+    publishDate: '2026-04-15',
     name: 'Subscription Businesses',
     shortName: 'Subscriptions',
     metaTitle: 'YouTube Marketing for Subscription Businesses | SellOnTube',
@@ -1978,7 +1978,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'marketplaces',
-    publishDate: '2026-04-13',
+    publishDate: '2026-04-17',
     name: 'Marketplace Businesses',
     shortName: 'Marketplaces',
     metaTitle: 'YouTube Marketing for Marketplace Businesses | SellOnTube',
@@ -2046,7 +2046,7 @@ export const niches: Niche[] = [
   },
   {
     slug: 'small-business',
-    publishDate: '2026-03-16',
+    publishDate: '2026-03-19',
     name: 'Small Businesses',
     shortName: 'Small Business',
     metaTitle: 'YouTube Marketing for Small Business | SellOnTube',

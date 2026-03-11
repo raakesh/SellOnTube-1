@@ -1,5 +1,5 @@
 # SellonTube Content Plan
-_Updated: 2026-03-10 — based on cleaned sot_keywords_final.csv (295 keywords)_
+_Updated: 2026-03-10 — based on sot_master.csv (406 keywords, includes gkp_new batch)_
 _Next review: 2026-04-10_
 
 ## North Star
@@ -98,7 +98,66 @@ saas, coaches, agencies, consultants, b2b-companies, course-creators, financial-
 
 ---
 
-### Tool 3 — YouTube Channel Audit Tool
+### Tool 3 — YouTube Keyword Research Tool (for Business)
+**Target keywords:**
+
+| Keyword | SV | Competition |
+|---|---|---|
+| `youtube keyword tool` | 50,000 | Low |
+| `keyword tools for youtube` | 50,000 | Low |
+| `youtube keyword research tool` | 5,000 | Low |
+| `youtube keyword search tool` | 5,000 | Low |
+| `youtube keyword analysis tool` | 5,000 | Low |
+| `youtube keyword tool free` | 5,000 | Low |
+| `youtube keyword finder` | 500 | Low |
+| `youtube keyword tracker` | 500 | Low |
+| `youtube keyword explorer` | 500 | Low |
+| `best youtube keyword research tool` | 500 | Low |
+
+**Angle:** Not for growing a creator channel — for finding keywords your B2B buyers are actually searching. Output: search volume, competition, and a "business relevance" signal.
+
+**Page URL:** `/tools/youtube-keyword-research-tool`
+
+---
+
+### Tool 4 — YouTube Title Generator for Business
+**Target keywords:**
+
+| Keyword | SV | Competition |
+|---|---|---|
+| `youtube title generator` | 50,000 | Low |
+| `title generator for youtube` | 50,000 | Low |
+| `video title generator` | 5,000 | Low |
+| `youtube title generator ai` | 5,000 | Low |
+| `youtube video title generator` | 5,000 | Low |
+| `ai youtube title generator` | 500 | Low |
+| `seo youtube title generator` | 500 | Low |
+| `youtube title maker` | 500 | Low |
+
+**Angle:** Not "viral titles for more views" — titles that match buyer search intent. Gemini Flash integration: input your topic + ICP → get 5 SEO-optimised title options with rationale.
+
+**Page URL:** `/tools/youtube-title-generator`
+
+---
+
+### Tool 5 — YouTube Video Ideas Generator for Business
+**Target keywords:**
+
+| Keyword | SV | Competition |
+|---|---|---|
+| `youtube video ideas generator` | 500 | Low |
+| `topic generator for youtube` | 50 | Low |
+| `youtube topic generator` | 50 | Low |
+| `youtube video ideas for businesses` | — | — |
+| `youtube content calendar generator` | — | — |
+
+**Angle:** Not random video ideas — ideas mapped to buyer stages (awareness → consideration → decision). Gemini Flash: input business type + ICP → get 10 video ideas with intent labels.
+
+**Page URL:** `/tools/youtube-video-ideas-generator`
+
+---
+
+### Tool 6 — YouTube Channel Audit Tool
 **Target keywords:**
 
 | Keyword | SV | KD | CPC | Intent |
@@ -156,7 +215,8 @@ saas, coaches, agencies, consultants, b2b-companies, course-creators, financial-
 ### Blog post notes
 
 **Mar 18 — YouTube Lead Generation**
-- Keywords also served: `lead gen youtube` (500, KD 12), `youtube ads for business` (500, $5,211 CPC, KD 6)
+- Primary: `youtube lead generation` (500, KD 20) — 900% YoY growth
+- Secondary: `lead gen youtube` (500, KD 12), `youtube lead gen` (500, KD 12), `youtube for lead generation` (50, KD 7), `lead generation through youtube` (50), `how to get clients from youtube` (50), `youtube customer acquisition` (no vol — high ICP intent)
 - CTA: Book a call. This post has the clearest path to DFY service conversion.
 
 **Mar 25 — YouTube Business Channel Setup**
@@ -176,9 +236,9 @@ saas, coaches, agencies, consultants, b2b-companies, course-creators, financial-
 
 ## TIER D — pSEO (status)
 
-All 29 niches are live. No new niches needed based on the cleaned keyword list.
+29 niches live. **1 new niche planned: `auto-dealers`** (from gkp_new batch).
 
-**Keyword-to-page verification needed (from sot_keywords_final):**
+**Keyword-to-page verification needed:**
 
 | Keyword | SV | Target page | Action |
 |---|---|---|---|
@@ -187,6 +247,20 @@ All 29 niches are live. No new niches needed based on the cleaned keyword list.
 | `youtube marketing for ecommerce` | 50 | `/youtube-for/ecommerce` | Confirm in meta title/description |
 | `youtube marketing for law firms` | 50 | `/youtube-for/law-firms` | Confirm in meta title/description |
 | `youtube marketing for small business` | 50 | `/youtube-for/small-business` | Confirm in meta title/description |
+| `youtube marketing for consultants` | — | `/youtube-for/consultants` | Confirm in meta title/description |
+| `youtube marketing for saas` | — | `/youtube-for/saas` | Confirm in meta title/description |
+| `youtube marketing for agencies` | 50 | `/youtube-for/marketing-agencies` | Confirm in meta title/description |
+
+**New pSEO niche to build — auto-dealers:**
+
+| Keyword | SV | KD | Notes |
+|---|---|---|---|
+| `auto dealer youtube marketing agency` | 50 | 0 | Intent: find a YouTube marketing agency for their dealership |
+| `automotive dealer youtube marketing agency` | 50 | 0 | Variant — same intent |
+
+- Target slug: `/youtube-for/auto-dealers`
+- Angle: YouTube as a lead gen channel for auto dealerships — test drive bookings, model explainers, lot walk-throughs
+- Add to `src/data/niches.ts` when building
 
 ---
 
@@ -198,6 +272,10 @@ All 29 niches are live. No new niches needed based on the cleaned keyword list.
 | `youtube seo` | 50,000 | 15 | Blog (Apr 29 post, secondary) |
 | `youtube seo optimization` | 50,000 | 15 | Blog (Apr 29 post, secondary) |
 | `create a company youtube channel` | 50,000 | 3 | Blog Mar 25 ⬅ biggest opportunity |
+| `youtube keyword tool` | 50,000 | 0 | Tool 3 — keyword research tool |
+| `title generator for youtube` | 50,000 | 0 | Tool 4 — title generator |
+| `youtube title generator` | 50,000 | 0 | Tool 4 — title generator |
+| `youtube in marketing` | 5,000 | 17 | Blog — `youtube-marketing-strategy` |
 | `youtube marketing` | 5,000 | 20 | Homepage / agency page |
 | `youtube marketing services` | 5,000 | 3 | Service page 1 |
 | `youtube seo services` | 5,000 | 1 | Service page 2 ⬅ best CPC-to-KD ratio |
@@ -232,16 +310,48 @@ All 29 niches are live. No new niches needed based on the cleaned keyword list.
 | `youtube seo company` | 500 | $1,403 | 5 | Service page 2 |
 | `using youtube for business` | 500 | $1,307 | 2 | Blog May 20 |
 
+### Lead generation cluster — `youtube-lead-generation` blog post (not-started)
+| Keyword | SV | KD | Notes |
+|---|---|---|---|
+| `youtube lead generation` | 500 | 20 | Primary — 900% YoY |
+| `lead gen youtube` | 500 | 12 | Secondary (already in Mar 18 scheduled post) |
+| `youtube for lead generation` | 50 | 7 | Supporting |
+| `lead generation through youtube` | 50 | 0 | Supporting |
+| `how to get clients from youtube` | 50 | 0 | Supporting |
+| `youtube customer acquisition` | — | — | High ICP intent |
+| `digital marketer youtube` | 500 | 13 | Adjacent — map to `youtube-marketing-strategy` |
+
 ### B2B-specific (low SV, perfect ICP fit)
 | Keyword | SV | KD | Mapped to |
 |---|---|---|---|
 | `b2b youtube` | 500 | 0 | Existing post ✓ |
 | `youtube for b2b` | 500 | 0 | Existing post ✓ |
 | `youtube for b2b marketing` | 50 | 0 | Existing post ✓ |
+| `youtube b2b marketing best practices` | 50 | 0 | Existing post ✓ |
+| `youtube sales funnel strategy` | — | — | Existing post ✓ |
+| `youtube inbound marketing` | 50 | 0 | Existing post ✓ |
 | `b2b youtube channels` | 50 | 0 | Blog May 27 |
 | `b2b youtube strategy` | 50 | 0 | Blog May 27 |
+| `how to generate leads from youtube` | 50 | 0 | Blog Mar 18 (lead gen) |
+| `how to get leads from youtube` | 50 | 0 | Blog Mar 18 (lead gen) |
+| `using youtube to promote your business` | 50 | 0 | Blog → `youtube-marketing-strategy` |
+| `youtube content marketing strategy` | 50 | 0 | Blog → `youtube-marketing-strategy` |
+| `marketing strategy for youtube` | 500 | 0 | Blog → `youtube-marketing-strategy` |
 | `youtube marketing b2b` | 50 | 0 | Existing post ✓ |
 | `youtube digital marketing agency` | 50 | 0 | Service page 1 |
+
+### Competitor comparison cluster — `best-youtube-keyword-research-tools` blog (not-started)
+| Keyword | SV | Notes |
+|---|---|---|
+| `vidiq keywords` | 500 | People evaluating VidIQ → intercept with B2B-positioned alternative |
+| `vidiq keyword research` | 500 | Same |
+| `tubebuddy keyword explorer` | 500 | Same for TubeBuddy |
+| `vidiq search volume` | 50 | Supporting |
+| `best youtube keyword research tool` | 500 | Primary — already in keyword research tool cluster |
+
+→ One blog post: "Best YouTube Keyword Research Tools for Business Channels" that positions SellonTube's tool as the B2B-focused alternative.
+
+---
 
 ### Parked (revisit Q3 2026)
 
