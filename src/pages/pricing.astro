@@ -6,10 +6,11 @@ import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { SITE } from 'astrowind:config';
+import { PRICING, formatPrice } from '~/utils/pricing';
 
 const metadata = {
-  title: 'YouTube Channel Management Pricing: $6,000/Month, Done for You',
-  description: 'Full-service YouTube marketing for B2B businesses. 4 videos/month: strategy, SEO, scripting, production. $6,000/month, no long-term contract.',
+  title: `YouTube Channel Management Pricing: ${formatPrice(PRICING.current)}/Month, Done for You`,
+  description: `Full-service YouTube marketing for B2B businesses. 4 videos/month: strategy, SEO, scripting, production. ${formatPrice(PRICING.current)}/month, no long-term contract.`,
   openGraph: {
     type: 'website',
     images: [{ url: '~/assets/images/default.png', width: 1200, height: 628 }],
@@ -28,11 +29,11 @@ const serviceSchema = {
   },
   "offers": {
     "@type": "Offer",
-    "price": "6000",
+    "price": PRICING.current.toString(),
     "priceCurrency": "USD",
     "priceSpecification": {
       "@type": "UnitPriceSpecification",
-      "price": "6000",
+      "price": PRICING.current.toString(),
       "priceCurrency": "USD",
       "billingDuration": "P1M"
     },
@@ -59,10 +60,10 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Is $6,000/month + taxes suitable for my business?",
+      "name": `Is ${formatPrice(PRICING.current)}/month + taxes suitable for my business?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If the total revenue you generate from a customer meaningfully exceeds your acquisition costs and your customers research on YouTube, the economics are typically positive. We validate this in the diagnostic. Note: Rate increases to $7,000/month starting April 30, 2026."
+        "text": `If the total revenue you generate from a customer meaningfully exceeds your acquisition costs and your customers research on YouTube, the economics are typically positive. We validate this in the diagnostic. Note: Rate increases to ${formatPrice(PRICING.future)}/month starting ${PRICING.rateIncreaseDate}.`
       }
     },
     {
@@ -109,7 +110,7 @@ const faqSchema = {
   <HeroText
 
     title="One plan. Built for high value businesses."
-    subtitle="If your business has strong lifetime value and customers who search before buying, we turn YouTube into a profitable new acquisition channel. For $6,000/month + applicable taxes, we build and run it end-to-end."
+    subtitle={`If your business has strong lifetime value and customers who search before buying, we turn YouTube into a profitable new acquisition channel. For ${formatPrice(PRICING.current)}/month + applicable taxes, we build and run it end-to-end.`}
   />
   <!-- Single Premium Pricing Card -->
   <section class="py-10 sm:py-12">
@@ -147,13 +148,13 @@ const faqSchema = {
           <div class="mt-3">
             <div class="flex items-baseline gap-3">
               <div class="flex items-baseline gap-2">
-                <span class="text-4xl sm:text-5xl font-bold tracking-tight">$6,000</span>
+                <span class="text-4xl sm:text-5xl font-bold tracking-tight">{formatPrice(PRICING.current)}</span>
                 <span class="text-sm text-gray-600 dark:text-slate-300">per month + applicable taxes</span>
               </div>
             </div>
             <div class="mt-2 inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-600 dark:text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              <span class="text-xs font-medium text-orange-800 dark:text-orange-300">New rate starting April 30, 2026: $7,000/month</span>
+              <span class="text-xs font-medium text-orange-800 dark:text-orange-300">New rate starting {PRICING.rateIncreaseDate}: {formatPrice(PRICING.future)}/month</span>
             </div>
           </div>
 
@@ -161,7 +162,7 @@ const faqSchema = {
           <div class="mt-4 p-4 rounded-lg bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border border-orange-200 dark:border-orange-800">
             <div class="flex items-center justify-between gap-4 flex-wrap">
               <div>
-                <p class="text-sm font-semibold text-orange-900 dark:text-orange-200">1 Priority Spot at $6,000/month</p>
+                <p class="text-sm font-semibold text-orange-900 dark:text-orange-200">1 Priority Spot at {formatPrice(PRICING.prioritySpot)}/month</p>
                 <p class="text-xs text-orange-700 dark:text-orange-300 mt-0.5">Special rate expires in:</p>
               </div>
               <div id="countdown" class="flex gap-2 text-center">
@@ -200,13 +201,13 @@ const faqSchema = {
 
         <div class="px-6 sm:px-8 py-6 sm:py-7">
           <ul class="space-y-3 text-sm sm:text-base text-gray-700 dark:text-slate-200">
-            <li>• 4 videos per month: research → script → production → edit → your feedback → publish.</li>
-            <li>• Full YouTube SEO: keyword mapping, ranking strategy, and metadata optimisation.</li>
-            <li>• High-conversion titles, thumbnails, and hooks informed by data.</li>
-            <li>• Landing page and CTA optimisation for lead capture.</li>
-            <li>• Weekly analytics and iteration on formats, hooks, and topics.</li>
-            <li>• Channel dashboard: traffic, keyword rankings, and lead attribution.</li>
-            <li>• Every ranked video becomes a 24/7 salesperson for your business.</li>
+            <li>• 4 videos per month (research, script, production, edit, your feedback, publish)</li>
+            <li>• Full YouTube SEO: keyword mapping, ranking strategy, and metadata optimisation</li>
+            <li>• High-conversion titles, thumbnails, and hooks informed by data</li>
+            <li>• Landing page and CTA optimisation for lead capture</li>
+            <li>• Weekly analytics and iteration on formats, hooks, and topics</li>
+            <li>• Channel dashboard: traffic, keyword rankings, and lead attribution</li>
+            <li>• Every ranked video becomes a 24/7 salesperson for your business</li>
           </ul>
 
           <!-- 24-Hour Booking Bonus -->
@@ -216,7 +217,7 @@ const faqSchema = {
               <div>
                 <p class="text-sm font-semibold text-emerald-900 dark:text-emerald-200">Limited Time Bonus</p>
                 <p class="text-xs text-emerald-800 dark:text-emerald-300 mt-1">
-                  <span class="font-medium">Book your diagnostic call within 24 hours</span> and receive a complimentary <span class="font-semibold">Premium YouTube SEO Competitive Analysis</span> ($1,200 value) — a deep-dive audit of your top 3 competitors' YouTube strategies, keyword gaps, and ranking opportunities.
+                  <span class="font-medium">Book your diagnostic call within 24 hours</span> and receive a complimentary <span class="font-semibold">Premium YouTube SEO Competitive Analysis</span> ($1,200 value): a deep-dive audit of your top 3 competitors' YouTube strategies, keyword gaps, and ranking opportunities.
                 </p>
               </div>
             </div>
@@ -229,7 +230,7 @@ const faqSchema = {
                      bg-black text-white hover:bg-gray-900 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100
                      transition-colors"
             >
-              Apply for a diagnostic call
+              Book a diagnostic call
             </a>
           </div>
         </div>
@@ -322,9 +323,9 @@ const faqSchema = {
     columns={1}
     items={[
       {
-        title: 'Is $6,000/month + taxes suitable for my business?',
+        title: `Is ${formatPrice(PRICING.current)}/month + taxes suitable for my business?`,
         description:
-          'If the total revenue you generate from a customer meaningfully exceeds your acquisition costs and your customers research on YouTube, the economics are typically positive. We validate this in the diagnostic. Note: Rate increases to $7,000/month starting April 30, 2026.',
+          `If the total revenue you generate from a customer meaningfully exceeds your acquisition costs and your customers research on YouTube, the economics are typically positive. We validate this in the diagnostic. Note: Rate increases to ${formatPrice(PRICING.future)}/month starting ${PRICING.rateIncreaseDate}.`,
       },
       {
         title: 'Do you work only with SaaS?',
