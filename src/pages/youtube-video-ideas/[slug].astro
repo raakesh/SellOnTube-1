@@ -40,7 +40,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
-    { "@type": "ListItem", "position": 2, "name": "YouTube Topic Library", "item": `${siteUrl}/youtube-video-ideas` },
+    { "@type": "ListItem", "position": 2, "name": "YouTube Video Ideas", "item": `${siteUrl}/youtube-video-ideas` },
     { "@type": "ListItem", "position": 3, "name": topic.title, "item": `${siteUrl}/youtube-video-ideas/${topic.slug}` },
   ]
 };
@@ -66,7 +66,7 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
     <div class="flex flex-wrap items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-8">
       <a href="/" class="hover:text-primary transition-colors">SellOnTube</a>
       <span>/</span>
-      <a href="/youtube-video-ideas" class="hover:text-primary transition-colors">YouTube Topic Library</a>
+      <a href="/youtube-video-ideas" class="hover:text-primary transition-colors">YouTube Video Ideas</a>
       <span>/</span>
       <span class="text-gray-700 dark:text-slate-300">{topic.title}</span>
     </div>
@@ -104,7 +104,7 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
     <!-- Why this topic works -->
     <section class="py-10 border-t border-slate-200 dark:border-slate-700">
       <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-5">
-        Why This Topic Category Works for {topic.industryLabel} Customer Acquisition
+        YouTube Video Ideas for {topic.industryLabel}: Why This Category Drives Customer Acquisition
       </h2>
       <div class="space-y-4">
         {topic.intro.split('\n\n').map((para) => (
@@ -125,7 +125,7 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
       <!-- Buyer intent signal diagram -->
       <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 p-5">
         <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-5">
-          Where this topic type sits in the buyer journey
+          Where these video ideas sit in the buyer journey
         </p>
         <div class="flex items-center gap-1">
           {[
@@ -156,7 +156,7 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
           ))}
         </div>
         <p class="text-[10px] text-center text-gray-400 dark:text-slate-600 mt-4">
-          Topics in this category primarily target the evaluation and decision stages — where viewers are closest to a purchase.
+          These YouTube video ideas primarily target the evaluation and decision stages — where viewers are closest to a purchase.
         </p>
       </div>
     </section>
@@ -165,9 +165,9 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
     <div class="my-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl p-6">
       <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
         <div class="flex-1">
-          <p class="font-semibold text-gray-900 dark:text-white mb-1">Check the buyer-intent score for your specific topic</p>
+          <p class="font-semibold text-gray-900 dark:text-white mb-1">Check the buyer-intent score for your specific video idea</p>
           <p class="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">
-            Not every topic in this category will work equally well for your audience. Use the YouTube Topic Evaluator to score a specific topic against your target customer.
+            Not every video idea in this category will work equally well for your audience. Use the YouTube Topic Evaluator to score a specific idea against your target customer.
           </p>
         </div>
         <a
@@ -185,10 +185,10 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
     <!-- Example video titles -->
     <section class="py-10 border-t border-slate-200 dark:border-slate-700">
       <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
-        Example Video Titles in This Category
+        Example YouTube Video Ideas in This Category
       </h2>
       <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
-        These are the types of titles that attract {topic.industryLabel.toLowerCase()} buyers during active evaluation. Use them as directional models when developing your own topics — adjusted for your specific product, service, and target customer.
+        These are the types of YouTube video ideas that attract {topic.industryLabel.toLowerCase()} buyers during active evaluation. Use them as directional models when developing your own video ideas — adjusted for your specific product, service, and target customer.
       </p>
       <ul class="space-y-2">
         {topic.exampleVideoTitles.map((title, i) => (
@@ -205,10 +205,10 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
     <!-- How SellOnTube identifies and produces these topics -->
     <section class="py-10 border-t border-slate-200 dark:border-slate-700">
       <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-5">
-        How to Identify and Validate the Right Topics for Your Business
+        How to Find the Right YouTube Video Ideas for Your Business
       </h2>
       <p class="text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-8">
-        Not every topic in this category will be right for your business. The ones that convert are specific to your product, your target customer, and the competitive landscape on YouTube. Here is how to find them.
+        Not every video idea in this category will be right for your business. The ones that convert are specific to your product, your target customer, and the competitive landscape on YouTube. Here is how to find them.
       </p>
 
       <div class="space-y-7">
@@ -216,7 +216,7 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
           {
             num: '01',
             title: 'Start with your buyer\'s search language',
-            body: `Before you open a keyword tool, write down the exact phrases your target customer would type when they are comparing options or validating a decision. The most effective ${topic.title.toLowerCase()} use the language of the buyer, not the language of the vendor.`,
+            body: `Before you open a keyword tool, write down the exact phrases your target customer would type when they are comparing options or validating a decision. The best YouTube video ideas use the language of the buyer, not the language of the vendor.`,
           },
           {
             num: '02',
@@ -226,7 +226,7 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
           {
             num: '03',
             title: 'Evaluate buyer intent, not just search volume',
-            body: 'A topic with 200 monthly searches from people who are actively evaluating solutions will generate more pipeline than a topic with 10,000 monthly searches from people who are learning. Use the YouTube Topic Evaluator to score topics against your specific audience before investing production time.',
+            body: 'A video idea with 200 monthly searches from people who are actively evaluating solutions will generate more pipeline than one with 10,000 searches from people who are learning. Use the YouTube Topic Evaluator to score your video ideas against your specific audience before investing production time.',
           },
           {
             num: '04',
@@ -253,7 +253,7 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
         Full YouTube Strategy for {topic.industryLabel}
       </h2>
       <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
-        {topic.title} is one category within a broader YouTube acquisition strategy for {topic.industryLabel.toLowerCase()}. The full guide covers buyer psychology, acquisition mechanics, the SellOnTube system, and a complete set of high-intent topic categories relevant to your business type.
+        {topic.title} is one set of YouTube video ideas within a broader acquisition strategy for {topic.industryLabel.toLowerCase()}. The full guide covers buyer psychology, acquisition mechanics, the SellOnTube system, and a complete set of high-intent video ideas relevant to your business type.
       </p>
       <a
         href={`/youtube-for-${topic.industryHubSlug}`}
@@ -270,10 +270,10 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
     {relatedTopics.length > 0 && (
       <section class="py-10 border-t border-slate-200 dark:border-slate-700">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
-          Related Topic Categories
+          Related YouTube Video Ideas
         </h2>
         <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
-          A strong YouTube acquisition strategy uses multiple topic types that work together across the buyer journey. These categories complement {topic.title.toLowerCase()} by reaching buyers at adjacent stages.
+          A strong YouTube acquisition strategy uses multiple video idea categories that work together across the buyer journey. These complement {topic.title.toLowerCase()} by reaching buyers at adjacent stages.
         </p>
         <div class="grid sm:grid-cols-2 gap-3">
           {relatedTopics.map((related) => (
@@ -297,16 +297,16 @@ const badgeColor = industryColors[topic.industry] ?? 'bg-slate-100 dark:bg-slate
     <!-- Topic Library link back -->
     <section class="py-10 border-t border-slate-200 dark:border-slate-700">
       <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
-        Browse the Full YouTube Topic Library
+        Browse All YouTube Video Ideas
       </h2>
       <p class="text-gray-600 dark:text-slate-400 leading-relaxed mb-6">
-        {topic.title} is one of {topics.length} buyer-intent topic categories in the SellOnTube library. Browse the full set organised by business type.
+        {topic.title} is one of {topics.length} buyer-intent YouTube video idea categories in the SellOnTube library. Browse the full set organised by business type.
       </p>
       <a
         href="/youtube-video-ideas"
         class="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors"
       >
-        View all {topics.length} topic categories
+        View all {topics.length} YouTube video ideas
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>

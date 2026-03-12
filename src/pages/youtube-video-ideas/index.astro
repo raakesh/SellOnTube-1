@@ -7,8 +7,8 @@ const siteUrl = SITE.site || 'https://sellontube.com';
 const calLink = 'https://cal.com/gautham-8bdvdx/30min';
 
 const metadata = {
-  title: 'YouTube Topic Library for B2B Businesses | SellOnTube',
-  description: 'Browse 50 high-intent YouTube topic categories built for B2B customer acquisition. SaaS, agencies, consultants, coaches, and B2B services — find the exact topics that reach buyers in evaluation mode.',
+  title: 'YouTube Video Ideas for B2B Businesses | SellOnTube',
+  description: 'Browse 50 high-intent YouTube video ideas built for B2B customer acquisition. SaaS, agencies, consultants, coaches, and B2B services — video ideas that reach buyers in evaluation mode.',
   canonical: `${siteUrl}/youtube-video-ideas`,
   robots: { index: true, follow: true },
 };
@@ -47,18 +47,18 @@ const topicsByIndustry = industries.map((industry) => ({
         <svg class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
         </svg>
-        <span class="text-sm font-semibold uppercase tracking-wider text-slate-400">YouTube Topic Library</span>
+        <span class="text-sm font-semibold uppercase tracking-wider text-slate-400">YouTube Video Ideas for Business</span>
       </div>
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
-        YouTube Topics That Attract Buyers, Not Just Viewers
+        YouTube Video Ideas That Attract Buyers, Not Just Viewers
       </h1>
       <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-        Most YouTube content attracts curiosity. This library is built for acquisition. Every topic category here is designed to reach B2B buyers during active evaluation — the moment they are deciding, not just learning.
+        Most YouTube video ideas attract curiosity. These are built for acquisition. Every idea here is designed to reach B2B buyers during active evaluation — the moment they are deciding, not just learning.
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         <div class="inline-flex items-center gap-2 bg-slate-800 rounded-full px-4 py-2">
           <span class="w-2 h-2 rounded-full bg-green-400"></span>
-          <span class="text-sm text-slate-300">{publishedTopics.length} topic categories</span>
+          <span class="text-sm text-slate-300">{publishedTopics.length} video idea categories</span>
         </div>
         <div class="inline-flex items-center gap-2 bg-slate-800 rounded-full px-4 py-2">
           <span class="w-2 h-2 rounded-full bg-blue-400"></span>
@@ -73,21 +73,21 @@ const topicsByIndustry = industries.map((industry) => ({
     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-8">
       <div class="grid sm:grid-cols-3 gap-6 text-center">
         <div>
-          <p class="text-white font-semibold mb-1">Why topic selection matters</p>
+          <p class="text-white font-semibold mb-1">Why your video ideas determine your results</p>
           <p class="text-slate-400 text-sm leading-relaxed">
-            A video about a problem is entertainment. A video about a buying decision is acquisition. The topic determines which one you produce.
+            A video about a problem is entertainment. A video about a buying decision is acquisition. The idea you pick determines which one you produce.
           </p>
         </div>
         <div>
-          <p class="text-white font-semibold mb-1">What buyer-intent topics look like</p>
+          <p class="text-white font-semibold mb-1">What buyer-intent video ideas look like</p>
           <p class="text-slate-400 text-sm leading-relaxed">
-            Comparisons, pricing breakdowns, migration guides, ROI analysis, and hiring guides. Searches made by people who are close to a decision.
+            Comparisons, pricing breakdowns, migration guides, ROI analysis, and hiring guides — searches made by people who are close to a decision.
           </p>
         </div>
         <div>
-          <p class="text-white font-semibold mb-1">How to use this library</p>
+          <p class="text-white font-semibold mb-1">How to use these video ideas</p>
           <p class="text-slate-400 text-sm leading-relaxed">
-            Find your business type, browse the topic categories, and evaluate individual topics against your audience using the free Topic Evaluator.
+            Find your business type, browse the video ideas, and evaluate individual ideas against your audience using the free Topic Evaluator.
           </p>
         </div>
       </div>
@@ -98,9 +98,9 @@ const topicsByIndustry = industries.map((industry) => ({
   <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-12 pb-6">
     <div class="bg-primary/5 border border-primary/20 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
       <div class="flex-1">
-        <p class="font-semibold text-gray-900 dark:text-white mb-1">Not sure which topics fit your audience?</p>
+        <p class="font-semibold text-gray-900 dark:text-white mb-1">Not sure which video ideas fit your audience?</p>
         <p class="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">
-          Paste any topic into the YouTube Topic Evaluator and get an instant buyer-intent score, estimated search demand, and 3–5 higher-converting alternatives.
+          Paste any video idea into the YouTube Topic Evaluator and get an instant buyer-intent score, estimated search demand, and 3–5 higher-converting alternatives.
         </p>
       </div>
       <a
@@ -156,7 +156,7 @@ const topicsByIndustry = industries.map((industry) => ({
                   {topic.exampleVideoTitles.length} video examples
                 </span>
                 <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary">
-                  View topics
+                  View video ideas
                   <svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
                   </svg>
@@ -174,10 +174,10 @@ const topicsByIndustry = industries.map((industry) => ({
     <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16 text-center">
       <p class="text-xs font-semibold uppercase tracking-wider text-primary mb-3">Ready to build a YouTube strategy?</p>
       <h2 class="text-3xl font-bold text-white mb-4">
-        We'll identify the 10 topics most likely to drive customers for your business
+        We'll identify the 10 video ideas most likely to drive customers for your business
       </h2>
       <p class="text-slate-400 mb-8 leading-relaxed max-w-xl mx-auto">
-        Book a free 30-minute diagnostic call. We'll look at your acquisition model, your competitive landscape, and tell you exactly which topic categories will move the needle fastest.
+        Book a free 30-minute diagnostic call. We'll look at your acquisition model, your competitive landscape, and tell you exactly which video ideas will move the needle fastest.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a
