@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { PRICING, formatPrice } from '~/utils/pricing';
 
 const metadata = {
   title: 'YouTube ROI Calculator',
@@ -88,10 +89,10 @@ const metadata = {
               <span id="breakeven-display">2</span> <span class="text-2xl sm:text-3xl">customers/month</span>
             </p>
             <p class="text-xs text-gray-400 dark:text-slate-500">
-              Our pricing: $7,000/month for done-for-you YouTube acquisition
+              Our pricing: {formatPrice(PRICING.current)}/month for done-for-you YouTube acquisition
             </p>
             <p class="text-xs text-gray-400 dark:text-slate-500 mt-3" id="breakeven-math">
-              $7,000/month ÷ $3,500 margin = 2 customers
+              {formatPrice(PRICING.current)}/month ÷ $3,500 margin = 2 customers
             </p>
           </div>
 
@@ -201,8 +202,8 @@ const metadata = {
   />
 </Layout>
 
-<script>
-  const MONTHLY_COST = 7000;
+<script define:vars={{ monthlyServiceCost: PRICING.current }}>
+  const MONTHLY_COST = monthlyServiceCost;
 
   // Elements
   const revenueInput = document.getElementById('revenue-input') as HTMLInputElement;
@@ -262,7 +263,7 @@ const metadata = {
     // Update breakeven display
     (document.getElementById('breakeven-display') as HTMLElement).textContent = breakeven.toString();
     (document.getElementById('breakeven-math') as HTMLElement).textContent =
-      `$7,000/month ÷ ${formatMoney(margin)} margin = ${breakeven} customers`;
+      `${formatMoney(MONTHLY_COST)}/month ÷ ${formatMoney(margin)} margin = ${breakeven} customers`;
 
     // Update margin display (de-emphasized)
     (document.getElementById('margin-display') as HTMLElement).textContent = formatMoney(margin);
